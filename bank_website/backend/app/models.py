@@ -70,6 +70,7 @@ class AgentWorkflowStatus(str, enum.Enum):
     AWAITING_APPROVAL = "awaiting_approval"
     APPROVED = "approved"
     REJECTED = "rejected"
+    DISCARDED = "discarded"
     POSTED = "posted"
     FAILED = "failed"
 

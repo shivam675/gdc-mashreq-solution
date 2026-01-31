@@ -56,6 +56,8 @@ async def process_sentiment_workflow(
         matched_transactions = []
         matched_reviews = []
         iaa_analysis = ""
+        sanitized_summary = {}
+        confidence_score = 0.0
         
         async for update in iaa_agent.analyze(db, sentiment_id, sentiment_data):
             # Broadcast progress
@@ -70,6 +72,8 @@ async def process_sentiment_workflow(
                 matched_transactions = update["data"]["matched_transactions"]
                 matched_reviews = update["data"]["matched_reviews"]
                 iaa_analysis = update["data"]["analysis"]
+                sanitized_summary = update["data"]["sanitized_summary"]
+                confidence_score = update["data"]["confidence_score"]
         
         # Update workflow with IAA results
         workflow.iaa_matched_transactions = matched_transactions
@@ -79,14 +83,16 @@ async def process_sentiment_workflow(
         workflow.status = AgentWorkflowStatus.IAA_COMPLETED
         await db.commit()
         
-        # Broadcast IAA completed
+        # Broadcast IAA completed with full details for operator dashboard
         await manager.broadcast({
             "type": "iaa_completed",
             "workflow_id": workflow_id,
             "data": {
                 "matched_transactions": matched_transactions,
                 "matched_reviews": matched_reviews,
-                "analysis": iaa_analysis
+                "analysis": iaa_analysis,
+                "confidence_score": confidence_score,
+                "sanitized_summary": sanitized_summary
             },
             "timestamp": datetime.utcnow().isoformat()
         })
@@ -102,15 +108,11 @@ async def process_sentiment_workflow(
             "timestamp": datetime.utcnow().isoformat()
         })
         
-        # Run EBA post generation (streaming)
+        # Run EBA post generation (streaming) - pass ONLY sanitized summary
         eba_post = ""
         async for update in eba_agent.generate_post(
             sentiment_data,
-            iaa_analysis,
-            {
-                "matched_transactions": matched_transactions,
-                "matched_reviews": matched_reviews
-            }
+            sanitized_summary  # ONLY sanitized data, no sensitive info
         ):
             # Broadcast progress
             await manager.broadcast({
@@ -295,6 +297,48 @@ async def approve_post(
         "workflow_id": workflow_id,
         "posted": post_result.get("success"),
         "message": "Post approved and published" if post_result.get("success") else "Post approved but publishing failed"
+    }
+
+@router.post("/workflows/{workflow_id}/discard")
+async def discard_post(
+    workflow_id: str,
+    discard_data: dict,
+    db: AsyncSession = Depends(get_db)
+):
+    """Discard a PR post without posting to social media"""
+    result = await db.execute(
+        select(AgentWorkflow).where(AgentWorkflow.workflow_id == workflow_id)
+    )
+    workflow = result.scalar_one_or_none()
+    
+    if not workflow:
+        raise HTTPException(status_code=404, detail="Workflow not found")
+    
+    if workflow.status != AgentWorkflowStatus.AWAITING_APPROVAL:
+        raise HTTPException(status_code=400, detail="Workflow not awaiting approval")
+    
+    # Update workflow to discarded status
+    workflow.status = AgentWorkflowStatus.DISCARDED
+    workflow.approved_by = discard_data.get("discarded_by")  # Track who discarded it
+    workflow.approved_at = datetime.utcnow()  # Use this field to track discard time
+    
+    await db.commit()
+    
+    # Broadcast discard event
+    await manager.broadcast({
+        "type": "post_discarded",
+        "workflow_id": workflow_id,
+        "data": {
+            "discarded_by": discard_data.get("discarded_by"),
+            "reason": discard_data.get("reason", "Not specified")
+        },
+        "timestamp": datetime.utcnow().isoformat()
+    })
+    
+    return {
+        "status": "discarded",
+        "workflow_id": workflow_id,
+        "message": "Post has been discarded"
     }
 
 @router.delete("/workflows/{workflow_id}")

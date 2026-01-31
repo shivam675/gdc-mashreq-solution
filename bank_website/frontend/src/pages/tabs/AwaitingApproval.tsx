@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { workflowsApi } from '@/api';
-import { Edit3, Send, X, Clock, FileText, Trash2, Info } from 'lucide-react';
+import { Edit3, Send, X, Clock, FileText, Info, XCircle } from 'lucide-react';
 import { formatDistanceToNow } from 'date-fns';
 import ReactMarkdown from 'react-markdown';
 
@@ -83,11 +83,18 @@ export default function AwaitingApproval({ workflows, isLoading, refetch }: Prop
     },
   });
 
-  const deleteMutation = useMutation({
-    mutationFn: async (workflowId: number) => {
-      return workflowsApi.delete(workflowId);
+  const discardMutation = useMutation({
+    mutationFn: async ({
+      workflowId,
+      discardedBy,
+    }: {
+      workflowId: string;
+      discardedBy: string;
+    }) => {
+      return workflowsApi.discard(workflowId, { discarded_by: discardedBy });
     },
     onSuccess: () => {
+      refetch();
       queryClient.invalidateQueries({ queryKey: ['workflows'] });
     },
   });
@@ -100,8 +107,16 @@ export default function AwaitingApproval({ workflows, isLoading, refetch }: Prop
   }, []);
 
   const handleDiscard = (workflow: AgentWorkflow) => {
-    if (confirm(`Discard workflow ${workflow.workflow_id}? This cannot be undone.`)) {
-      deleteMutation.mutate(workflow.id);
+    if (!approverName.trim()) {
+      alert('Please enter your name');
+      return;
+    }
+    
+    if (confirm(`Discard post ${workflow.workflow_id}? This will move it to the Discarded tab.`)) {
+      discardMutation.mutate({
+        workflowId: workflow.workflow_id,
+        discardedBy: approverName,
+      });
     }
   };
 
@@ -226,14 +241,6 @@ export default function AwaitingApproval({ workflows, isLoading, refetch }: Prop
                       Created {formatDistanceToNow(new Date(workflow.created_at), { addSuffix: true })}
                     </p>
                   </div>
-                  
-                  <button
-                    onClick={() => handleDiscard(workflow)}
-                    className="text-red-400 hover:text-red-300 transition-colors"
-                    title="Discard this post"
-                  >
-                    <Trash2 className="w-5 h-5" />
-                  </button>
                 </div>
 
                 <div className="bg-slate-900 rounded-lg p-4 mb-4 max-h-96 overflow-y-auto break-words">
@@ -285,6 +292,15 @@ export default function AwaitingApproval({ workflows, isLoading, refetch }: Prop
                         >
                           <Send className="w-4 h-4" />
                           <span>Approve</span>
+                        </button>
+                        <button
+                          onClick={() => handleDiscard(workflow)}
+                          disabled={!approverName.trim() || isCountingDown}
+                          title={!approverName.trim() ? 'Enter your name to discard' : 'Discard this post'}
+                          className="flex items-center space-x-2 px-4 py-2 bg-red-600 hover:bg-red-700 disabled:bg-slate-700 disabled:text-slate-500 text-white rounded-lg transition-colors"
+                        >
+                          <XCircle className="w-4 h-4" />
+                          <span>Discard</span>
                         </button>
                       </>
                     ) : (

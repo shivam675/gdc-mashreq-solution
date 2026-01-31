@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { workflowsApi } from '@/api';
-import { Clock, CheckCircle } from 'lucide-react';
+import { Clock, CheckCircle, XCircle } from 'lucide-react';
 import clsx from 'clsx';
 import AwaitingApproval from './tabs/AwaitingApproval';
 import ApprovedPosts from './tabs/ApprovedPosts';
+import DiscardedPosts from './tabs/DiscardedPosts';
 
-type TabType = 'awaiting' | 'approved';
+type TabType = 'awaiting' | 'approved' | 'discarded';
 
 export default function PRPosts() {
   const [activeTab, setActiveTab] = useState<TabType>('awaiting');
@@ -22,6 +23,7 @@ export default function PRPosts() {
 
   const awaitingCount = workflows?.filter((w) => w.status === 'awaiting_approval').length || 0;
   const approvedCount = workflows?.filter((w) => w.status === 'approved' || w.status === 'posted').length || 0;
+  const discardedCount = workflows?.filter((w) => w.status === 'discarded').length || 0;
 
   return (
     <div className="space-y-6">
@@ -68,6 +70,24 @@ export default function PRPosts() {
               </span>
             )}
           </button>
+
+          <button
+            onClick={() => setActiveTab('discarded')}
+            className={clsx(
+              'flex items-center space-x-2 px-6 py-3 text-sm font-medium transition-colors border-b-2',
+              activeTab === 'discarded'
+                ? 'text-primary-400 border-primary-400'
+                : 'text-slate-400 border-transparent hover:text-slate-200 hover:border-slate-600'
+            )}
+          >
+            <XCircle className="w-4 h-4" />
+            <span>Discarded</span>
+            {discardedCount > 0 && (
+              <span className="ml-2 bg-red-500/20 text-red-400 text-xs font-semibold px-2 py-0.5 rounded-full">
+                {discardedCount}
+              </span>
+            )}
+          </button>
         </nav>
       </div>
 
@@ -75,8 +95,10 @@ export default function PRPosts() {
       <div className="mt-6">
         {activeTab === 'awaiting' ? (
           <AwaitingApproval workflows={workflows} isLoading={isLoading} refetch={refetch} />
-        ) : (
+        ) : activeTab === 'approved' ? (
           <ApprovedPosts workflows={workflows} isLoading={isLoading} />
+        ) : (
+          <DiscardedPosts workflows={workflows} isLoading={isLoading} />
         )}
       </div>
     </div>

@@ -15,6 +15,8 @@ export const workflowsApi = {
   getById: (workflowId: string) => api.get(`/workflows/${workflowId}`),
   approve: (workflowId: string, data: { edited_post?: string; approved_by: string }) =>
     api.post(`/workflows/${workflowId}/approve`, data),
+  discard: (workflowId: string, data: { discarded_by: string; reason?: string }) =>
+    api.post(`/workflows/${workflowId}/discard`, data),
   delete: (id: number) => api.delete(`/workflows/${id}`),
 };
 

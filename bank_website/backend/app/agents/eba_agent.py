@@ -49,12 +49,19 @@ class ExecutiveBriefingAgent:
     async def _generate_pr_post_stream(
         self,
         sentiment_data: Dict[str, Any],
-        iaa_analysis: str,
-        matched_data: Dict[str, Any]
+        sanitized_summary: Dict[str, Any]
     ) -> AsyncGenerator[str, None]:
-        """Generate PR post using Ollama with streaming"""
+        """Generate PR post using Ollama with streaming - uses ONLY sanitized data"""
         
-        # Prepare prompt
+        # Extract sanitized verification data (NO sensitive info)
+        transactions_found = sanitized_summary.get('transactions_found', 0)
+        reviews_found = sanitized_summary.get('reviews_found', 0)
+        sentiment_match_count = sanitized_summary.get('sentiment_match_count', 0)
+        confidence_score = sanitized_summary.get('confidence_score', 0.0)
+        verification = sanitized_summary.get('verification', 'NOT CONFIRMED')
+        internal_sentiment = sanitized_summary.get('sentiment', 'unknown')
+        
+        # Prepare prompt with ONLY sanitized data
         prompt = f"""You are an Executive Briefing Agent for a bank's PR team. You need to create a professional social media post to address public concerns.
 
 **Social Media Sentiment Detected:**
@@ -62,12 +69,13 @@ class ExecutiveBriefingAgent:
 - Confidence: {sentiment_data.get('confidence')}
 - Key Concerns: {', '.join(sentiment_data.get('drivers', []))}
 
-**Internal Analysis Report:**
-{iaa_analysis}
-
-**Matched Internal Data:**
-- Transactions flagged: {len(matched_data.get('matched_transactions', []))}
-- Customer reviews found: {len(matched_data.get('matched_reviews', []))}
+**Internal Verification Results (Sanitized):**
+- Transactions Found: {transactions_found}
+- Customer Reviews Found: {reviews_found}
+- Matching Sentiment Reviews: {sentiment_match_count}
+- Confidence Score: {confidence_score:.1f}%
+- Verification Status: {verification}
+- Internal Sentiment: {internal_sentiment}
 
 Create a professional, reassuring social media post (in **markdown format**) that:
 1. Acknowledges the public concern without confirming or denying specifics
@@ -75,6 +83,7 @@ Create a professional, reassuring social media post (in **markdown format**) tha
 3. Provides reassurance about internal monitoring and safeguards
 4. Invites customers to reach out for concerns
 5. Keeps a professional, calm, and confident tone
+6. Uses the verification confidence to gauge response strength (higher confidence = more acknowledgment, lower confidence = more reassurance)
 
 Target audience: General public
 Length: 150-250 words
@@ -85,10 +94,14 @@ IMPORTANT RULES:
 - Do NOT add explanations, notes, or commentary after the post
 - Do NOT include lines starting with "---" or "**Note:**" or "**Key" 
 - Do NOT include meta-commentary about tone, structure, or strategy
+- Do NOT mention specific customer names, transaction amounts, or review details
 - The post should be ready to publish as-is
 
 Do NOT include:
 - Specific customer data
+- Transaction amounts
+- Customer names
+- Review text content
 - Admission of fault
 - Technical jargon
 - Links or references
@@ -126,11 +139,10 @@ Do NOT include:
     async def generate_post(
         self,
         sentiment_data: Dict[str, Any],
-        iaa_analysis: str,
-        matched_data: Dict[str, Any]
+        sanitized_summary: Dict[str, Any]
     ) -> AsyncGenerator[Dict[str, Any], None]:
         """
-        Generate PR post with streaming
+        Generate PR post with streaming - receives ONLY sanitized data (no sensitive info)
         Yields progress updates via generator
         """
         try:
@@ -138,15 +150,14 @@ Do NOT include:
             yield {
                 "type": "progress",
                 "stage": "generating_post",
-                "message": "Generating PR post..."
+                "message": "Generating PR post using sanitized internal data..."
             }
             
-            # Step 2: Stream the post
+            # Step 2: Stream the post (ONLY using sanitized summary)
             full_post = ""
             async for chunk in self._generate_pr_post_stream(
                 sentiment_data,
-                iaa_analysis,
-                matched_data
+                sanitized_summary
             ):
                 full_post += chunk
                 yield {

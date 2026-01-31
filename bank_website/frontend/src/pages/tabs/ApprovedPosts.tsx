@@ -74,7 +74,10 @@ export default function ApprovedPosts({ workflows, isLoading }: Props) {
         <div className="space-y-4">
           {approvedPosts.map((workflow) => {
             const finalPost = workflow.eba_edited_post || workflow.eba_original_post || '';
-            const wasEdited = workflow.eba_edited_post !== null && workflow.eba_edited_post !== undefined;
+            // Only show "Edited" if edited_post exists AND is different from original
+            const wasEdited = workflow.eba_edited_post && 
+                            workflow.eba_edited_post !== workflow.eba_original_post &&
+                            workflow.eba_edited_post.trim() !== workflow.eba_original_post?.trim();
             const isPosted = workflow.status === 'posted';
 
             return (

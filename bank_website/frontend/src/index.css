@@ -7,14 +7,24 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #0f172a;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Light mode (default) */
+:root {
+  color-scheme: light;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #f1f5f9;
+}
+
+/* Dark mode */
+:root.dark {
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #0f172a;
 }
 
 body {
@@ -26,6 +36,73 @@ body {
   min-height: 100vh;
 }
 
+/* Light mode overrides for components with hardcoded dark colors */
+:root:not(.dark) {
+  /* Override hardcoded dark backgrounds */
+  .bg-slate-900 {
+    background-color: #f8fafc !important;
+  }
+  
+  .bg-slate-800 {
+    background-color: #ffffff !important;
+  }
+  
+  .bg-slate-700 {
+    background-color: #e2e8f0 !important;
+  }
+  
+  .bg-slate-900\/50 {
+    background-color: rgba(248, 250, 252, 0.5) !important;
+  }
+  
+  /* Override hardcoded dark text */
+  .text-white {
+    color: #0f172a !important;
+  }
+  
+  .text-slate-100 {
+    color: #1e293b !important;
+  }
+  
+  .text-slate-200 {
+    color: #334155 !important;
+  }
+  
+  .text-slate-300 {
+    color: #475569 !important;
+  }
+  
+  .text-slate-400 {
+    color: #64748b !important;
+  }
+  
+  /* Override hardcoded dark borders */
+  .border-slate-700 {
+    border-color: #e2e8f0 !important;
+  }
+  
+  .border-slate-800 {
+    border-color: #cbd5e1 !important;
+  }
+  
+  /* Override hover states */
+  .hover\:bg-slate-700\/50:hover {
+    background-color: rgba(226, 232, 240, 0.5) !important;
+  }
+  
+  .hover\:bg-slate-800\/50:hover {
+    background-color: rgba(241, 245, 249, 0.5) !important;
+  }
+  
+  .hover\:bg-slate-700:hover {
+    background-color: #e2e8f0 !important;
+  }
+  
+  .hover\:bg-slate-600:hover {
+    background-color: #cbd5e1 !important;
+  }
+}
+
 @layer utilities {
   .scrollbar-thin::-webkit-scrollbar {
     width: 8px;
@@ -33,15 +110,15 @@ body {
   }
 
   .scrollbar-thin::-webkit-scrollbar-track {
-    background: #1e293b;
+    @apply bg-slate-200 dark:bg-slate-800;
   }
 
   .scrollbar-thin::-webkit-scrollbar-thumb {
-    background: #475569;
+    @apply bg-slate-400 dark:bg-slate-600;
     border-radius: 4px;
   }
 
   .scrollbar-thin::-webkit-scrollbar-thumb:hover {
-    background: #64748b;
+    @apply bg-slate-500 dark:bg-slate-500;
   }
 }
