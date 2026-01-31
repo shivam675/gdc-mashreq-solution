@@ -1,0 +1,30 @@
+{
+  "database": {
+    "url": "sqlite+aiosqlite:///./bank_database.db"
+  },
+  "ollama": {
+    "base_url": "http://localhost:11434",
+    "model": "ministral-3:3b",
+    "temperature": 0.7,
+    "stream": true
+  },
+  "agents": {
+    "iaa": {
+      "name": "Internal Analysis Agent",
+      "max_retries": 3,
+      "retry_delay": 2,
+      "search_threshold": 0.6
+    },
+    "eba": {
+      "name": "Executive Briefing Agent",
+      "max_retries": 3,
+      "retry_delay": 2,
+      "social_media_url": "http://localhost:8001/api/posts"
+    }
+  },
+  "server": {
+    "host": "0.0.0.0",
+    "port": 8000,
+    "reload": true
+  }
+}

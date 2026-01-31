@@ -1,0 +1,14 @@
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+sqlalchemy==2.0.25
+pydantic==2.5.3
+pydantic-settings==2.1.0
+python-multipart==0.0.6
+websockets==12.0
+httpx
+ollama
+python-json-logger==2.0.7
+aiosqlite==0.19.0
+sentence-transformers==2.3.1
+numpy==1.26.3
+faker==22.0.0
