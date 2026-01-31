@@ -102,6 +102,9 @@ class AgentWorkflowStatus(str, Enum):
     APPROVED = "approved"
     REJECTED = "rejected"
     DISCARDED = "discarded"
+    ESCALATED_MANAGEMENT = "escalated_management"
+    ESCALATED_LEGAL = "escalated_legal"
+    ESCALATED_INVESTIGATION = "escalated_investigation"
     POSTED = "posted"
     FAILED = "failed"
 
@@ -124,6 +127,7 @@ class AgentWorkflowResponse(BaseModel):
     workflow_id: str
     sentiment_id: int
     status: AgentWorkflowStatus
+    signal_type: Optional[str] = None
     iaa_matched_transactions: Optional[List[dict]]
     iaa_matched_reviews: Optional[List[dict]]
     iaa_analysis: Optional[str]
@@ -131,9 +135,17 @@ class AgentWorkflowResponse(BaseModel):
     eba_original_post: Optional[str]
     eba_edited_post: Optional[str]
     eba_completed_at: Optional[datetime]
+    confidence_score: Optional[float] = None
+    data_quality: Optional[str] = None
+    risk_level: Optional[str] = None
+    escalation_recommendation: Optional[str] = None
     approved_by: Optional[str]
     approved_at: Optional[datetime]
     posted_at: Optional[datetime]
+    discarded_by: Optional[str] = None
+    escalated_by: Optional[str] = None
+    escalated_at: Optional[datetime] = None
+    escalation_type: Optional[str] = None
     error_message: Optional[str]
     retry_count: int
     timestamp: datetime

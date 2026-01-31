@@ -8,6 +8,8 @@ import Dashboard from './pages/Dashboard';
 import PRPosts from './pages/PRPosts';
 import DatabaseManagement from './pages/DatabaseManagement';
 import Settings from './pages/Settings';
+import AuditTrail from './pages/AuditTrail';
+import ExecutiveDashboard from './pages/ExecutiveDashboard';
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
           >
             <Route index element={<Dashboard />} />
             <Route path="posts" element={<PRPosts />} />
+            <Route path="audit-trail" element={<AuditTrail />} />
+            <Route path="executive" element={<ExecutiveDashboard />} />
             <Route path="database" element={<DatabaseManagement />} />
             <Route path="settings" element={<Settings />} />
           </Route>

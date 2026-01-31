@@ -195,8 +195,9 @@ Do NOT include:
                     self.social_media_url,
                     json={
                         "content": post_content,
-                        "timestamp": datetime.utcnow().isoformat(),
-                        "platform": "social_media_simulator"
+                        "channel_id": "bank-official",
+                        "image_url": None,
+                        "scheduled_at": None
                     }
                 )
                 response.raise_for_status()

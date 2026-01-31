@@ -212,51 +212,16 @@ function WorkflowCard({ workflow }: { workflow: WorkflowState }) {
                     </div>
                   </div>
                 )}
-                
-                {/* Verification Stats */}
-                {workflow.iaa_sanitized_summary && (
-                  <div className="grid grid-cols-5 gap-2 mt-4 pt-4 border-t border-slate-200 dark:border-slate-700">
-                    <StatCard label="Transactions" value={workflow.iaa_sanitized_summary.transactions_found || 0} color="blue" />
-                    <StatCard label="Reviews" value={workflow.iaa_sanitized_summary.reviews_found || 0} color="blue" />
-                    <StatCard label="Match" value={workflow.iaa_sanitized_summary.sentiment_match_count || 0} color="blue" />
-                    <StatCard label="Score" value={`${workflow.iaa_confidence_score?.toFixed(1) || 0}%`} color="green" />
-                    <StatCard 
-                      label="Status" 
-                      value={workflow.iaa_sanitized_summary.verification === 'CONFIRMED' ? '✓' : '⏳'} 
-                      color={workflow.iaa_sanitized_summary.verification === 'CONFIRMED' ? 'green' : 'yellow'} 
-                    />
-                  </div>
-                )}
               </div>
             </div>
           )}
 
-          {/* Matched Customer Reviews - Right */}
-          {workflow.iaa_matched_reviews && workflow.iaa_matched_reviews.length > 0 && (
-            <div className="space-y-4">
-              <SectionHeader
-                icon={<MessageSquare className="w-5 h-5" />}
-                title="Matched Customer Reviews"
-                status={workflow.status === 'iaa' ? 'processing' : 'completed'}
-              />
-              <div className="bg-slate-50 dark:bg-slate-900/50 rounded-lg p-4 border border-slate-200 dark:border-slate-700 max-h-96 overflow-y-auto">
-                <ReviewsTable 
-                  reviews={workflow.iaa_matched_reviews} 
-                  maxRows={7} 
-                />
-              </div>
-            </div>
-          )}
-        </div>
-
-        {/* Bottom Section: IAA Analysis (Left) + EBA PR Post (Right) */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          {/* IAA Analysis - Left */}
+          {/* IAA Analysis - Right (moved from bottom) */}
           {(workflow.iaa_analysis || workflow.iaa_progress) && (
             <div className="space-y-4">
               <SectionHeader
                 icon={<MessageSquare className="w-5 h-5" />}
-                title="IAA Analysis"
+                title="IAA Social Signal Analysis"
                 status={workflow.status === 'iaa' ? 'processing' : 'completed'}
               />
               <div className="bg-slate-50 dark:bg-slate-900/50 rounded-lg p-4 border border-slate-200 dark:border-slate-700 max-h-96 overflow-y-auto">
@@ -268,13 +233,16 @@ function WorkflowCard({ workflow }: { workflow: WorkflowState }) {
               </div>
             </div>
           )}
+        </div>
 
-          {/* EBA PR Post - Right */}
+        {/* Bottom Section: EBA PR Post (Full Width) */}
+        <div className="grid grid-cols-1 gap-6">
+          {/* EBA PR Post */}
           {(workflow.eba_post || workflow.eba_progress) && (
             <div className="space-y-4">
               <SectionHeader
                 icon={<FileText className="w-5 h-5" />}
-                title="EBA PR Post"
+                title="EBA Executive Briefing"
                 status={workflow.status === 'eba' ? 'processing' : 'completed'}
               />
               <div className="bg-slate-50 dark:bg-slate-900/50 rounded-lg p-4 border border-slate-200 dark:border-slate-700 max-h-96 overflow-y-auto">

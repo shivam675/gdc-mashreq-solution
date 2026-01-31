@@ -47,7 +47,7 @@ class Config:
     
     @property
     def social_media_url(self) -> str:
-        return self.get('agents.eba.social_media_url', 'http://localhost:8001/api/posts')
+        return self.get('agents.eba.social_media_url', 'http://localhost:8001/posts')
 
 # Global config instance
 config = Config()

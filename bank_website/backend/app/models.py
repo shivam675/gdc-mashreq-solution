@@ -71,6 +71,9 @@ class AgentWorkflowStatus(str, enum.Enum):
     APPROVED = "approved"
     REJECTED = "rejected"
     DISCARDED = "discarded"
+    ESCALATED_MANAGEMENT = "escalated_management"
+    ESCALATED_LEGAL = "escalated_legal"
+    ESCALATED_INVESTIGATION = "escalated_investigation"
     POSTED = "posted"
     FAILED = "failed"
 
@@ -93,10 +96,20 @@ class AgentWorkflow(Base):
     eba_edited_post = Column(Text, nullable=True)  # User-edited post
     eba_completed_at = Column(DateTime, nullable=True)
     
+    # Uncertainty and risk metrics
+    confidence_score = Column(Float, nullable=True)  # 0-100
+    data_quality = Column(String(20), nullable=True)  # excellent/good/fair/poor
+    risk_level = Column(String(20), nullable=True)  # CRITICAL/HIGH/MEDIUM/LOW
+    escalation_recommendation = Column(Text, nullable=True)  # Suggested action
+    
     # Approval & posting
     approved_by = Column(String(100), nullable=True)
     approved_at = Column(DateTime, nullable=True)
     posted_at = Column(DateTime, nullable=True)
+    discarded_by = Column(String(200), nullable=True)
+    escalated_by = Column(String(100), nullable=True)
+    escalated_at = Column(DateTime, nullable=True)
+    escalation_type = Column(String(50), nullable=True)  # management/legal/investigation
     
     # Error handling
     error_message = Column(Text, nullable=True)

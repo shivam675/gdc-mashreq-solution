@@ -1,6 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException, WebSocket, WebSocketDisconnect, BackgroundTasks
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select, desc
+from sqlalchemy.orm import selectinload
 from typing import List
 from datetime import datetime
 import uuid
@@ -52,47 +53,66 @@ async def process_sentiment_workflow(
             "timestamp": datetime.utcnow().isoformat()
         })
         
-        # Run IAA analysis (streaming)
-        matched_transactions = []
-        matched_reviews = []
+        # Run IAA analysis (streaming markdown)
         iaa_analysis = ""
-        sanitized_summary = {}
-        confidence_score = 0.0
         
-        async for update in iaa_agent.analyze(db, sentiment_id, sentiment_data):
-            # Broadcast progress
+        async for chunk in iaa_agent.analyze_and_stream(sentiment_data, db):
+            # Accumulate analysis text
+            iaa_analysis += chunk
+            
+            # Broadcast progress (send chunks for progressive rendering)
             await manager.broadcast({
                 "type": "iaa_progress",
                 "workflow_id": workflow_id,
-                "data": update,
+                "data": {"chunk": chunk},
                 "timestamp": datetime.utcnow().isoformat()
             })
-            
-            if update.get("type") == "completed":
-                matched_transactions = update["data"]["matched_transactions"]
-                matched_reviews = update["data"]["matched_reviews"]
-                iaa_analysis = update["data"]["analysis"]
-                sanitized_summary = update["data"]["sanitized_summary"]
-                confidence_score = update["data"]["confidence_score"]
         
         # Update workflow with IAA results
-        workflow.iaa_matched_transactions = matched_transactions
-        workflow.iaa_matched_reviews = matched_reviews
         workflow.iaa_analysis = iaa_analysis
         workflow.iaa_completed_at = datetime.utcnow()
         workflow.status = AgentWorkflowStatus.IAA_COMPLETED
+        
+        # Extract confidence and risk from FDA signal
+        workflow.confidence_score = sentiment_data.get("confidence", 75.0)
+        
+        # Determine data quality based on confidence
+        if workflow.confidence_score >= 90:
+            workflow.data_quality = "excellent"
+        elif workflow.confidence_score >= 75:
+            workflow.data_quality = "good"
+        elif workflow.confidence_score >= 60:
+            workflow.data_quality = "fair"
+        else:
+            workflow.data_quality = "poor"
+        
+        # Determine risk level from FDA signal type or default to MEDIUM
+        signal_type = sentiment_data.get("signal_type", "").lower()
+        if "phishing" in signal_type or "fraud" in signal_type or "security" in signal_type:
+            workflow.risk_level = "CRITICAL"
+        elif "scam" in signal_type or "warning" in signal_type:
+            workflow.risk_level = "HIGH"
+        elif "complaint" in signal_type or "issue" in signal_type:
+            workflow.risk_level = "MEDIUM"
+        else:
+            workflow.risk_level = "MEDIUM"
+        
+        # Generate escalation recommendation based on risk and confidence
+        if workflow.risk_level == "CRITICAL" or workflow.confidence_score < 60:
+            workflow.escalation_recommendation = "Recommend escalation to Legal/Compliance for review"
+        elif workflow.risk_level == "HIGH" and workflow.confidence_score < 75:
+            workflow.escalation_recommendation = "Consider management review before posting"
+        else:
+            workflow.escalation_recommendation = None
+        
         await db.commit()
         
-        # Broadcast IAA completed with full details for operator dashboard
+        # Broadcast IAA completed
         await manager.broadcast({
             "type": "iaa_completed",
             "workflow_id": workflow_id,
             "data": {
-                "matched_transactions": matched_transactions,
-                "matched_reviews": matched_reviews,
-                "analysis": iaa_analysis,
-                "confidence_score": confidence_score,
-                "sanitized_summary": sanitized_summary
+                "analysis": iaa_analysis
             },
             "timestamp": datetime.utcnow().isoformat()
         })
@@ -108,11 +128,18 @@ async def process_sentiment_workflow(
             "timestamp": datetime.utcnow().isoformat()
         })
         
-        # Run EBA post generation (streaming) - pass ONLY sanitized summary
+        # Prepare summary for EBA (based on IAA analysis)
+        sanitized_summary = {
+            "analysis": iaa_analysis,
+            "signal_type": sentiment_data.get("signal_type", "unknown"),
+            "confidence": sentiment_data.get("confidence", 0)
+        }
+        
+        # Run EBA post generation (streaming)
         eba_post = ""
         async for update in eba_agent.generate_post(
             sentiment_data,
-            sanitized_summary  # ONLY sanitized data, no sensitive info
+            sanitized_summary
         ):
             # Broadcast progress
             await manager.broadcast({
@@ -219,14 +246,52 @@ async def get_workflows(
     db: AsyncSession = Depends(get_db)
 ):
     """Get recent workflows, optionally filtered by status"""
-    query = select(AgentWorkflow).order_by(desc(AgentWorkflow.created_at)).limit(limit)
+    query = select(AgentWorkflow).options(
+        selectinload(AgentWorkflow.sentiment)
+    ).order_by(desc(AgentWorkflow.created_at)).limit(limit)
     
     if status:
         query = query.where(AgentWorkflow.status == status)
     
     result = await db.execute(query)
     workflows = result.scalars().all()
-    return workflows
+    
+    # Add signal_type from sentiment to each workflow
+    response_data = []
+    for workflow in workflows:
+        workflow_dict = {
+            "id": workflow.id,
+            "workflow_id": workflow.workflow_id,
+            "sentiment_id": workflow.sentiment_id,
+            "status": workflow.status,
+            "signal_type": workflow.sentiment.signal_type if workflow.sentiment else None,
+            "iaa_matched_transactions": workflow.iaa_matched_transactions,
+            "iaa_matched_reviews": workflow.iaa_matched_reviews,
+            "iaa_analysis": workflow.iaa_analysis,
+            "iaa_completed_at": workflow.iaa_completed_at,
+            "eba_original_post": workflow.eba_original_post,
+            "eba_edited_post": workflow.eba_edited_post,
+            "eba_completed_at": workflow.eba_completed_at,
+            "confidence_score": workflow.confidence_score,
+            "data_quality": workflow.data_quality,
+            "risk_level": workflow.risk_level,
+            "escalation_recommendation": workflow.escalation_recommendation,
+            "approved_by": workflow.approved_by,
+            "approved_at": workflow.approved_at,
+            "posted_at": workflow.posted_at,
+            "discarded_by": workflow.discarded_by,
+            "escalated_by": workflow.escalated_by,
+            "escalated_at": workflow.escalated_at,
+            "escalation_type": workflow.escalation_type,
+            "error_message": workflow.error_message,
+            "retry_count": workflow.retry_count,
+            "timestamp": workflow.timestamp,
+            "created_at": workflow.created_at,
+            "updated_at": workflow.updated_at,
+        }
+        response_data.append(workflow_dict)
+    
+    return response_data
 
 @router.get("/workflows/{workflow_id}", response_model=AgentWorkflowResponse)
 async def get_workflow(
@@ -297,6 +362,56 @@ async def approve_post(
         "workflow_id": workflow_id,
         "posted": post_result.get("success"),
         "message": "Post approved and published" if post_result.get("success") else "Post approved but publishing failed"
+    }
+
+@router.post("/workflows/{workflow_id}/escalate")
+async def escalate_workflow(
+    workflow_id: str,
+    escalate_data: dict,
+    db: AsyncSession = Depends(get_db)
+):
+    """Escalate a workflow for management/legal/investigation review"""
+    result = await db.execute(
+        select(AgentWorkflow).where(AgentWorkflow.workflow_id == workflow_id)
+    )
+    workflow = result.scalar_one_or_none()
+    
+    if not workflow:
+        raise HTTPException(status_code=404, detail="Workflow not found")
+    
+    if workflow.status != AgentWorkflowStatus.AWAITING_APPROVAL:
+        raise HTTPException(status_code=400, detail="Workflow not awaiting approval")
+    
+    escalation_type = escalate_data.get("escalation_type", "management")
+    
+    # Set escalation status based on type
+    if escalation_type == "management":
+        workflow.status = AgentWorkflowStatus.ESCALATED_MANAGEMENT
+    elif escalation_type == "legal":
+        workflow.status = AgentWorkflowStatus.ESCALATED_LEGAL
+    elif escalation_type == "investigation":
+        workflow.status = AgentWorkflowStatus.ESCALATED_INVESTIGATION
+    
+    workflow.escalated_by = escalate_data.get("escalated_by")
+    workflow.escalated_at = datetime.utcnow()
+    workflow.escalation_type = escalation_type
+    
+    await db.commit()
+    
+    # Broadcast escalation event
+    await manager.broadcast({
+        "type": "workflow_escalated",
+        "workflow_id": workflow_id,
+        "data": {
+            "escalated_by": escalate_data.get("escalated_by"),
+            "escalation_type": escalation_type
+        },
+        "timestamp": datetime.utcnow().isoformat()
+    })
+    
+    return {
+        "status": "success",
+        "message": f"Workflow escalated to {escalation_type}"
     }
 
 @router.post("/workflows/{workflow_id}/discard")

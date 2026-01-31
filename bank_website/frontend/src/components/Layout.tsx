@@ -1,5 +1,5 @@
 import { Outlet, NavLink, useNavigate } from 'react-router-dom';
-import { LayoutDashboard, FileText, Database, Activity, Settings, LogOut } from 'lucide-react';
+import { LayoutDashboard, FileText, Database, Activity, Settings, LogOut, Shield, BarChart3 } from 'lucide-react';
 import { useWebSocket } from '@/hooks/useWebSocket';
 import { useAuth } from '@/contexts/AuthContext';
 import clsx from 'clsx';
@@ -77,6 +77,36 @@ export default function Layout() {
             >
               <FileText className="w-5 h-5" />
               <span>PR Posts</span>
+            </NavLink>
+
+            <NavLink
+              to="/audit-trail"
+              className={({ isActive }) =>
+                clsx(
+                  'flex items-center space-x-3 px-4 py-3 rounded-lg text-sm font-medium transition-all',
+                  isActive
+                    ? 'bg-primary-50 dark:bg-primary-900/20 text-primary-600 dark:text-primary-400 border-l-4 border-primary-600 dark:border-primary-400'
+                    : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700/50 border-l-4 border-transparent'
+                )
+              }
+            >
+              <Shield className="w-5 h-5" />
+              <span>Audit Trail</span>
+            </NavLink>
+
+            <NavLink
+              to="/executive"
+              className={({ isActive }) =>
+                clsx(
+                  'flex items-center space-x-3 px-4 py-3 rounded-lg text-sm font-medium transition-all',
+                  isActive
+                    ? 'bg-primary-50 dark:bg-primary-900/20 text-primary-600 dark:text-primary-400 border-l-4 border-primary-600 dark:border-primary-400'
+                    : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700/50 border-l-4 border-transparent'
+                )
+              }
+            >
+              <BarChart3 className="w-5 h-5" />
+              <span>Executive</span>
             </NavLink>
 
             <NavLink

@@ -19,7 +19,7 @@
       "name": "Executive Briefing Agent",
       "max_retries": 3,
       "retry_delay": 2,
-      "social_media_url": "http://localhost:8001/api/posts"
+      "social_media_url": "http://localhost:8001/posts/"
     }
   },
   "server": {

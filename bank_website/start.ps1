@@ -19,7 +19,7 @@ try {
 
 Write-Host ""
 Write-Host "[2/4] Starting Backend API Server..." -ForegroundColor Yellow
-Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd E:\gdc-mashreq-solution\bank_website\backend; uvicorn main:app --reload --host 0.0.0.0 --port 8000"
+Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd E:\gdc-mashreq-solution\bank_website\backend; ..\..\..\env\Scripts\Activate.ps1; uvicorn main:app --reload --host 0.0.0.0 --port 8000"
 Start-Sleep -Seconds 3
 
 Write-Host ""
@@ -29,9 +29,9 @@ Start-Sleep -Seconds 3
 
 Write-Host ""
 Write-Host "[4/4] Starting Simulators..." -ForegroundColor Yellow
-Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd E:\gdc-mashreq-solution\bank_website; python social_media_simulator.py"
+Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd E:\gdc-mashreq-solution\bank_website; ..\..\..\env\Scripts\Activate.ps1; python social_media_simulator.py"
 Start-Sleep -Seconds 2
-Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd E:\gdc-mashreq-solution\bank_website; python fda_agent_simulator.py"
+Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd E:\gdc-mashreq-solution\bank_website; ..\..\..\env\Scripts\Activate.ps1; python fda_agent_simulator.py"
 
 Write-Host ""
 Write-Host "========================================" -ForegroundColor Green

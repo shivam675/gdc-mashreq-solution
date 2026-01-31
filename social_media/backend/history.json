@@ -1,0 +1,1050 @@
+[
+  {
+    "post_id": 1,
+    "channel": "general",
+    "author": "@SignalStarter",
+    "content": "This discovery completely changed how I think about reality.",
+    "timestamp": "31-01-2026 15:31:08",
+    "comments": [
+      {
+        "comment_id": 1,
+        "parent_comment_id": null,
+        "handler_id": "Anonymous",
+        "type": "comment",
+        "comment": "This still messes with my head every time I think about it.",
+        "timestamp": "31-01-2026 15:31:09"
+      },
+      {
+        "comment_id": 2,
+        "parent_comment_id": 1,
+        "handler_id": "Anonymous",
+        "type": "reply",
+        "comment": "How though?",
+        "timestamp": "31-01-2026 15:31:10"
+      },
+      {
+        "comment_id": 3,
+        "parent_comment_id": 1,
+        "handler_id": "Anonymous",
+        "type": "reply",
+        "comment": "It breaks classical intuition entirely.",
+        "timestamp": "31-01-2026 15:31:11"
+      }
+    ]
+  },
+  {
+    "post_id": 2,
+    "channel": "social",
+    "author": "@AlertBot",
+    "content": "Multiple users reported suspicious investment DMs today.",
+    "timestamp": "31-01-2026 15:31:12",
+    "comments": [
+      {
+        "comment_id": 4,
+        "parent_comment_id": null,
+        "handler_id": "Anonymous",
+        "type": "comment",
+        "comment": "I received one of these messages. Looked very polished.",
+        "timestamp": "31-01-2026 15:31:13"
+      },
+      {
+        "comment_id": 5,
+        "parent_comment_id": 4,
+        "handler_id": "Anonymous",
+        "type": "reply",
+        "comment": "Did it include an external wallet link?",
+        "timestamp": "31-01-2026 15:31:14"
+      },
+      {
+        "comment_id": 6,
+        "parent_comment_id": 4,
+        "handler_id": "Anonymous",
+        "type": "reply",
+        "comment": "Yes, that\u2019s what made me suspicious.",
+        "timestamp": "31-01-2026 15:31:15"
+      }
+    ]
+  },
+  {
+    "post_id": 3,
+    "channel": "science",
+    "author": "@System",
+    "content": "Unusual spike in negative sentiment detected in #general.",
+    "timestamp": "31-01-2026 15:31:16",
+    "comments": [
+      {
+        "comment_id": 7,
+        "parent_comment_id": null,
+        "handler_id": "Anonymous",
+        "type": "comment",
+        "comment": "Can we identify the trigger for this sentiment change?",
+        "timestamp": "31-01-2026 15:31:17"
+      },
+      {
+        "comment_id": 8,
+        "parent_comment_id": 7,
+        "handler_id": "Anonymous",
+        "type": "reply",
+        "comment": "Correlated with post_id 101 and its reply chain velocity.",
+        "timestamp": "31-01-2026 15:31:18"
+      },
+      {
+        "comment_id": 9,
+        "parent_comment_id": 7,
+        "handler_id": "Anonymous",
+        "type": "reply",
+        "comment": "Potential emotional amplification detected. Monitoring.",
+        "timestamp": "31-01-2026 15:31:19"
+      }
+    ]
+  },
+  {
+    "post_id": 4,
+    "channel": "social",
+    "author": "@CuriousUser",
+    "content": "Is anyone else seeing strange login alerts on their accounts?",
+    "timestamp": "31-01-2026 15:31:20",
+    "comments": [
+      {
+        "comment_id": 10,
+        "parent_comment_id": null,
+        "handler_id": "Anonymous",
+        "type": "comment",
+        "comment": "Yes, I got two alerts from different locations.",
+        "timestamp": "31-01-2026 15:31:21"
+      },
+      {
+        "comment_id": 11,
+        "parent_comment_id": 10,
+        "handler_id": "Anonymous",
+        "type": "reply",
+        "comment": "Please reset your password immediately and enable 2FA.",
+        "timestamp": "31-01-2026 15:31:22"
+      },
+      {
+        "comment_id": 12,
+        "parent_comment_id": 10,
+        "handler_id": "Anonymous",
+        "type": "reply",
+        "comment": "Cross-checking with transaction logs now.",
+        "timestamp": "31-01-2026 15:31:23"
+      }
+    ]
+  },
+  {
+    "post_id": 5,
+    "channel": "science",
+    "author": "@TechObserver",
+    "content": "AI-generated voices are now indistinguishable from real humans. Thoughts?",
+    "timestamp": "31-01-2026 15:31:24",
+    "comments": [
+      {
+        "comment_id": 13,
+        "parent_comment_id": null,
+        "handler_id": "Anonymous",
+        "type": "comment",
+        "comment": "I tested one yesterday \u2014 genuinely unsettling.",
+        "timestamp": "31-01-2026 15:31:25"
+      },
+      {
+        "comment_id": 14,
+        "parent_comment_id": 13,
+        "handler_id": "Anonymous",
+        "type": "reply",
+        "comment": "Was it prosody or emotional variance that fooled you?",
+        "timestamp": "31-01-2026 15:31:26"
+      },
+      {
+        "comment_id": 15,
+        "parent_comment_id": 13,
+        "handler_id": "Anonymous",
+        "type": "reply",
+        "comment": "Mostly the pauses \u2014 felt very human.",
+        "timestamp": "31-01-2026 15:31:27"
+      },
+      {
+        "comment_id": 16,
+        "parent_comment_id": null,
+        "handler_id": "Anonymous",
+        "type": "comment",
+        "comment": "This is going to explode fraud cases if unregulated.",
+        "timestamp": "31-01-2026 15:31:28"
+      },
+      {
+        "comment_id": 17,
+        "parent_comment_id": 16,
+        "handler_id": "Anonymous",
+        "type": "reply",
+        "comment": "Voice-based scam vectors already increasing.",
+        "timestamp": "31-01-2026 15:31:29"
+      }
+    ]
+  },
+  {
+    "post_id": 6,
+    "channel": "banking",
+    "author": "@CommunityAlert",
+    "content": "New scam pattern: fake customer support calls referencing real transactions.",
+    "timestamp": "31-01-2026 15:31:30",
+    "comments": [
+      {
+        "comment_id": 18,
+        "parent_comment_id": null,
+        "handler_id": "Anonymous",
+        "type": "comment",
+        "comment": "They knew my last payment amount \u2014 terrifying.",
+        "timestamp": "31-01-2026 15:31:31"
+      },
+      {
+        "comment_id": 19,
+        "parent_comment_id": 18,
+        "handler_id": "Anonymous",
+        "type": "reply",
+        "comment": "Did they ask you to verify OTP?",
+        "timestamp": "31-01-2026 15:31:32"
+      },
+      {
+        "comment_id": 20,
+        "parent_comment_id": 18,
+        "handler_id": "Anonymous",
+        "type": "reply",
+        "comment": "Yes, that\u2019s when I hung up.",
+        "timestamp": "31-01-2026 15:31:33"
+      },
+      {
+        "comment_id": 21,
+        "parent_comment_id": null,
+        "handler_id": "Anonymous",
+        "type": "comment",
+        "comment": "Likely data leakage from third-party merchants.",
+        "timestamp": "31-01-2026 15:31:34"
+      },
+      {
+        "comment_id": 22,
+        "parent_comment_id": 21,
+        "handler_id": "Anonymous",
+        "type": "reply",
+        "comment": "Correlating with merchant breach timelines.",
+        "timestamp": "31-01-2026 15:31:35"
+      },
+      {
+        "comment_id": 38,
+        "parent_comment_id": null,
+        "handler_id": "Anonymous",
+        "type": "comment",
+        "comment": "Really!!!?",
+        "timestamp": "31-01-2026 16:21:10"
+      }
+    ]
+  },
+  {
+    "post_id": 7,
+    "channel": "lifestyle",
+    "author": "@System",
+    "content": "Rapid increase in reply velocity detected in multiple threads.",
+    "timestamp": "31-01-2026 15:31:36",
+    "comments": [
+      {
+        "comment_id": 23,
+        "parent_comment_id": null,
+        "handler_id": "Anonymous",
+        "type": "comment",
+        "comment": "Which channels are most affected?",
+        "timestamp": "31-01-2026 15:31:37"
+      },
+      {
+        "comment_id": 24,
+        "parent_comment_id": 23,
+        "handler_id": "Anonymous",
+        "type": "reply",
+        "comment": "#general and #fraud-watch primarily.",
+        "timestamp": "31-01-2026 15:31:38"
+      },
+      {
+        "comment_id": 25,
+        "parent_comment_id": 23,
+        "handler_id": "Anonymous",
+        "type": "reply",
+        "comment": "Emotional amplification pattern confirmed.",
+        "timestamp": "31-01-2026 15:31:39"
+      },
+      {
+        "comment_id": 26,
+        "parent_comment_id": null,
+        "handler_id": "Anonymous",
+        "type": "comment",
+        "comment": "Do we need to throttle responses?",
+        "timestamp": "31-01-2026 15:31:40"
+      },
+      {
+        "comment_id": 27,
+        "parent_comment_id": 26,
+        "handler_id": "Anonymous",
+        "type": "reply",
+        "comment": "Monitoring only. No throttling yet.",
+        "timestamp": "31-01-2026 15:31:41"
+      }
+    ]
+  },
+  {
+    "post_id": 8,
+    "channel": "social",
+    "author": "@DeepThinker",
+    "content": "Do you think humans will trust AI judgment over human experts soon?",
+    "timestamp": "31-01-2026 15:31:42",
+    "comments": [
+      {
+        "comment_id": 28,
+        "parent_comment_id": null,
+        "handler_id": "Anonymous",
+        "type": "comment",
+        "comment": "Already happening in medicine and finance.",
+        "timestamp": "31-01-2026 15:31:43"
+      },
+      {
+        "comment_id": 29,
+        "parent_comment_id": 28,
+        "handler_id": "Anonymous",
+        "type": "reply",
+        "comment": "Only because people don\u2019t understand the models.",
+        "timestamp": "31-01-2026 15:31:44"
+      },
+      {
+        "comment_id": 30,
+        "parent_comment_id": 28,
+        "handler_id": "Anonymous",
+        "type": "reply",
+        "comment": "Or because they outperform humans statistically.",
+        "timestamp": "31-01-2026 15:31:45"
+      },
+      {
+        "comment_id": 31,
+        "parent_comment_id": null,
+        "handler_id": "Anonymous",
+        "type": "comment",
+        "comment": "Trust without explainability is dangerous.",
+        "timestamp": "31-01-2026 15:31:46"
+      },
+      {
+        "comment_id": 32,
+        "parent_comment_id": 31,
+        "handler_id": "Anonymous",
+        "type": "reply",
+        "comment": "Flagging this for policy review.",
+        "timestamp": "31-01-2026 15:31:47"
+      }
+    ]
+  },
+  {
+    "post_id": 9,
+    "channel": "banking",
+    "author": "@BankOps",
+    "content": "We are seeing coordinated low-value transactions across dormant accounts.",
+    "timestamp": "31-01-2026 15:31:48",
+    "comments": [
+      {
+        "comment_id": 33,
+        "parent_comment_id": null,
+        "handler_id": "Anonymous",
+        "type": "comment",
+        "comment": "Could be bot-driven account testing.",
+        "timestamp": "31-01-2026 15:31:49"
+      },
+      {
+        "comment_id": 34,
+        "parent_comment_id": 33,
+        "handler_id": "Anonymous",
+        "type": "reply",
+        "comment": "Classic precursor to large-scale drain.",
+        "timestamp": "31-01-2026 15:31:50"
+      },
+      {
+        "comment_id": 35,
+        "parent_comment_id": 33,
+        "handler_id": "Anonymous",
+        "type": "reply",
+        "comment": "Recommend immediate account freezing.",
+        "timestamp": "31-01-2026 15:31:51"
+      },
+      {
+        "comment_id": 36,
+        "parent_comment_id": null,
+        "handler_id": "Anonymous",
+        "type": "comment",
+        "comment": "Initiating step-up authentication.",
+        "timestamp": "31-01-2026 15:31:52"
+      },
+      {
+        "comment_id": 37,
+        "parent_comment_id": 36,
+        "handler_id": "Anonymous",
+        "type": "reply",
+        "comment": "Pattern matches prior mule-network activity.",
+        "timestamp": "31-01-2026 15:31:53"
+      }
+    ]
+  },
+  {
+    "post_id": 10,
+    "channel": "general",
+    "author": "@SignalStarter",
+    "content": "This discovery completely changed how I think about reality.",
+    "timestamp": "31-01-2026 16:48:09",
+    "comments": [
+      {
+        "comment_id": 39,
+        "parent_comment_id": null,
+        "handler_id": "Anonymous",
+        "type": "comment",
+        "comment": "This still messes with my head every time I think about it.",
+        "timestamp": "31-01-2026 16:48:10"
+      },
+      {
+        "comment_id": 40,
+        "parent_comment_id": 39,
+        "handler_id": "Anonymous",
+        "type": "reply",
+        "comment": "How though?",
+        "timestamp": "31-01-2026 16:48:11"
+      },
+      {
+        "comment_id": 41,
+        "parent_comment_id": 39,
+        "handler_id": "Anonymous",
+        "type": "reply",
+        "comment": "It breaks classical intuition entirely.",
+        "timestamp": "31-01-2026 16:48:12"
+      }
+    ]
+  },
+  {
+    "post_id": 11,
+    "channel": "social",
+    "author": "@ConcernedCitizen_99",
+    "content": "URGENT: Is anyone else receiving texts about a 'Gold Rewards' expiry? \ud83d\uded1 I just got an SMS claiming my loyalty points will vanish in 24 hours unless I redeem them immediately at 'mashreq-rewards-portal-update.com'. The landing page looks frighteningly legitimate\u2014it has the exact branding, fonts, and even a copyright footer. It asks for card details to 'verify' shipping for the rewards. I almost filled it out before hesitating. #ScamAlert #BankingSecurity #Phishing",
+    "timestamp": "31-01-2026 16:48:22",
+    "comments": [
+      {
+        "comment_id": 42,
+        "parent_comment_id": null,
+        "handler_id": "Anonymous",
+        "type": "comment",
+        "comment": "Wait, I just got that too! I clicked the link because it looked official. Should I be worried?",
+        "timestamp": "31-01-2026 16:48:23"
+      },
+      {
+        "comment_id": 43,
+        "parent_comment_id": 42,
+        "handler_id": "Anonymous",
+        "type": "reply",
+        "comment": "@FastClicker Call your bank immediately and freeze your cards. Banks NEVER send links like that.",
+        "timestamp": "31-01-2026 16:48:24"
+      },
+      {
+        "comment_id": 44,
+        "parent_comment_id": 43,
+        "handler_id": "Anonymous",
+        "type": "reply",
+        "comment": "Oh god. On hold with them now. The site asked for my OTP to 'verify' the points. I entered it. \ud83d\ude30",
+        "timestamp": "31-01-2026 16:48:25"
+      },
+      {
+        "comment_id": 45,
+        "parent_comment_id": null,
+        "handler_id": "Anonymous",
+        "type": "comment",
+        "comment": "This is everywhere today. My mom got the same message but from a different number.",
+        "timestamp": "31-01-2026 16:48:26"
+      },
+      {
+        "comment_id": 46,
+        "parent_comment_id": null,
+        "handler_id": "Anonymous",
+        "type": "comment",
+        "comment": "These scammers are getting too good. The URL is barely different. Check the SSL certificate next time guys.",
+        "timestamp": "31-01-2026 16:48:27"
+      },
+      {
+        "comment_id": 47,
+        "parent_comment_id": null,
+        "handler_id": "Anonymous",
+        "type": "comment",
+        "comment": "Why isn't the bank posting about this?? They should have sent a warning notification by now if it's this widespread!",
+        "timestamp": "31-01-2026 16:48:28"
+      },
+      {
+        "comment_id": 48,
+        "parent_comment_id": 47,
+        "handler_id": "Anonymous",
+        "type": "reply",
+        "comment": "@AngryUser_X They usually do, give them a minute. It's Sunday.",
+        "timestamp": "31-01-2026 16:48:29"
+      },
+      {
+        "comment_id": 49,
+        "parent_comment_id": 48,
+        "handler_id": "Anonymous",
+        "type": "reply",
+        "comment": "Scammers don't take Sundays off @ChillGuy22. My friend lost 5000 AED last month to a similar thing.",
+        "timestamp": "31-01-2026 16:48:30"
+      },
+      {
+        "comment_id": 50,
+        "parent_comment_id": null,
+        "handler_id": "Anonymous",
+        "type": "comment",
+        "comment": "Does anyone know the official SMS header the bank uses? Mine came from a random mobile number.",
+        "timestamp": "31-01-2026 16:48:31"
+      },
+      {
+        "comment_id": 51,
+        "parent_comment_id": 50,
+        "handler_id": "Anonymous",
+        "type": "reply",
+        "comment": "@NewbieBanker Official messages usually show the Bank Name as the sender, not a number. Block and report it.",
+        "timestamp": "31-01-2026 16:48:32"
+      },
+      {
+        "comment_id": 52,
+        "parent_comment_id": null,
+        "handler_id": "Anonymous",
+        "type": "comment",
+        "comment": "I almost fell for it. The landing page had the exact logo and font. Scarily accurate.",
+        "timestamp": "31-01-2026 16:48:33"
+      },
+      {
+        "comment_id": 53,
+        "parent_comment_id": null,
+        "handler_id": "Anonymous",
+        "type": "comment",
+        "comment": "My uncle just called me panic-stricken. He gave them his CVV. Helping him block the card now.",
+        "timestamp": "31-01-2026 16:48:35"
+      },
+      {
+        "comment_id": 54,
+        "parent_comment_id": 53,
+        "handler_id": "Anonymous",
+        "type": "reply",
+        "comment": "@DailyRant Make sure he changes his app password too, not just the card.",
+        "timestamp": "31-01-2026 16:48:36"
+      },
+      {
+        "comment_id": 55,
+        "parent_comment_id": null,
+        "handler_id": "Anonymous",
+        "type": "comment",
+        "comment": "Is this affecting only one bank or multiple? I saw a similar post about another bank yesterday.",
+        "timestamp": "31-01-2026 16:48:37"
+      },
+      {
+        "comment_id": 56,
+        "parent_comment_id": null,
+        "handler_id": "Anonymous",
+        "type": "comment",
+        "comment": "Rumor has it a third-party marketing vendor got hacked. That's how they have our numbers.",
+        "timestamp": "31-01-2026 16:48:38"
+      },
+      {
+        "comment_id": 57,
+        "parent_comment_id": 56,
+        "handler_id": "Anonymous",
+        "type": "reply",
+        "comment": "@InsiderInfo Do you have a source for that? Or just spreading panic?",
+        "timestamp": "31-01-2026 16:48:39"
+      },
+      {
+        "comment_id": 58,
+        "parent_comment_id": 57,
+        "handler_id": "Anonymous",
+        "type": "reply",
+        "comment": "@FactChecker Just what I heard on Reddit. But it explains why the texts are so targeted.",
+        "timestamp": "31-01-2026 16:48:40"
+      },
+      {
+        "comment_id": 59,
+        "parent_comment_id": null,
+        "handler_id": "Anonymous",
+        "type": "comment",
+        "comment": "I'm removing my money. This feels unsafe.",
+        "timestamp": "31-01-2026 16:48:41"
+      },
+      {
+        "comment_id": 60,
+        "parent_comment_id": 59,
+        "handler_id": "Anonymous",
+        "type": "reply",
+        "comment": "@ScaredCustomer Relax. Phishing isn't a bank hack. It's social engineering. Your money is fine if you don't click fake links.",
+        "timestamp": "31-01-2026 16:48:42"
+      },
+      {
+        "comment_id": 61,
+        "parent_comment_id": 60,
+        "handler_id": "Anonymous",
+        "type": "reply",
+        "comment": "@RationalRick Easy for you to say. I'm not taking chances.",
+        "timestamp": "31-01-2026 16:48:43"
+      },
+      {
+        "comment_id": 62,
+        "parent_comment_id": null,
+        "handler_id": "Anonymous",
+        "type": "comment",
+        "comment": "Reporting the domain to Google Safe Browsing right now. Everyone should do the same.",
+        "timestamp": "31-01-2026 16:48:44"
+      },
+      {
+        "comment_id": 63,
+        "parent_comment_id": null,
+        "handler_id": "Anonymous",
+        "type": "comment",
+        "comment": "Guys, the link is down now. Looks like it's been taken offline.",
+        "timestamp": "31-01-2026 16:48:45"
+      },
+      {
+        "comment_id": 64,
+        "parent_comment_id": null,
+        "handler_id": "Anonymous",
+        "type": "comment",
+        "comment": "Update: Bank blocked the transaction in time! They said their fraud detection caught it. Phew. \ud83d\ude05",
+        "timestamp": "31-01-2026 16:48:46"
+      },
+      {
+        "comment_id": 65,
+        "parent_comment_id": 64,
+        "handler_id": "Anonymous",
+        "type": "reply",
+        "comment": "@FastClicker That's great news! See @AngryUser_X, the system works.",
+        "timestamp": "31-01-2026 16:48:47"
+      },
+      {
+        "comment_id": 66,
+        "parent_comment_id": null,
+        "handler_id": "Anonymous",
+        "type": "comment",
+        "comment": "Still think they should have tweeted a warning earlier.",
+        "timestamp": "31-01-2026 16:48:48"
+      },
+      {
+        "comment_id": 67,
+        "parent_comment_id": null,
+        "handler_id": "Anonymous",
+        "type": "comment",
+        "comment": "This is a classic 'Urgency' tactic. 'Expiring in 24 hours' shuts down critical thinking.",
+        "timestamp": "31-01-2026 16:48:49"
+      },
+      {
+        "comment_id": 68,
+        "parent_comment_id": null,
+        "handler_id": "Anonymous",
+        "type": "comment",
+        "comment": "I didn't even get the text. Feeling left out of the scam party lol.",
+        "timestamp": "31-01-2026 16:48:50"
+      },
+      {
+        "comment_id": 69,
+        "parent_comment_id": null,
+        "handler_id": "Anonymous",
+        "type": "comment",
+        "comment": "My grandmother just asked me about this. These people target the elderly specifically. Disgusting.",
+        "timestamp": "31-01-2026 16:48:51"
+      },
+      {
+        "comment_id": 70,
+        "parent_comment_id": null,
+        "handler_id": "Anonymous",
+        "type": "comment",
+        "comment": "Can we pin this post or something? People need to see the URL.",
+        "timestamp": "31-01-2026 16:48:52"
+      },
+      {
+        "comment_id": 71,
+        "parent_comment_id": null,
+        "handler_id": "Anonymous",
+        "type": "comment",
+        "comment": "Rule #1: If you get a text about your account, open the official app directly. Never click links.",
+        "timestamp": "31-01-2026 16:48:53"
+      },
+      {
+        "comment_id": 72,
+        "parent_comment_id": null,
+        "handler_id": "Anonymous",
+        "type": "comment",
+        "comment": "I got a call claiming to be from the fraud department asking if I received this text. Was that real??",
+        "timestamp": "31-01-2026 16:48:54"
+      },
+      {
+        "comment_id": 73,
+        "parent_comment_id": 72,
+        "handler_id": "Anonymous",
+        "type": "reply",
+        "comment": "@ConfusedUser Did they ask for your PIN or password? If yes, SCAM. If they just alerted you, might be real.",
+        "timestamp": "31-01-2026 16:48:55"
+      },
+      {
+        "comment_id": 74,
+        "parent_comment_id": 73,
+        "handler_id": "Anonymous",
+        "type": "reply",
+        "comment": "@SecurityHawk They asked me to confirm my date of birth. I hung up.",
+        "timestamp": "31-01-2026 16:48:56"
+      },
+      {
+        "comment_id": 75,
+        "parent_comment_id": 74,
+        "handler_id": "Anonymous",
+        "type": "reply",
+        "comment": "@ConfusedUser Good call. Better safe than sorry. Call the number on the back of your card to check.",
+        "timestamp": "31-01-2026 16:48:57"
+      },
+      {
+        "comment_id": 76,
+        "parent_comment_id": null,
+        "handler_id": "Anonymous",
+        "type": "comment",
+        "comment": "Stay safe everyone. The digital world is a minefield today.",
+        "timestamp": "31-01-2026 16:48:58"
+      },
+      {
+        "comment_id": 77,
+        "parent_comment_id": null,
+        "handler_id": "Anonymous",
+        "type": "comment",
+        "comment": "Just saw this. Blocking that number now.",
+        "timestamp": "31-01-2026 16:48:59"
+      },
+      {
+        "comment_id": 78,
+        "parent_comment_id": null,
+        "handler_id": "Anonymous",
+        "type": "comment",
+        "comment": "We are tracking these reports. Please forward suspicious SMS to the official fraud email.",
+        "timestamp": "31-01-2026 16:49:00"
+      },
+      {
+        "comment_id": 79,
+        "parent_comment_id": null,
+        "handler_id": "Anonymous",
+        "type": "comment",
+        "comment": "Tomorrow it will be a different link. Education is the only defense.",
+        "timestamp": "31-01-2026 16:49:01"
+      }
+    ]
+  },
+  {
+    "post_id": 12,
+    "channel": "social",
+    "author": "@Investigator_Doe",
+    "content": "Has anyone else seen this 'Official Investment Bot' ad on social media featuring the Bank's CEO? \ud83e\udd16 It claims guaranteed 40% returns if you download a specific app. The video looks slightly off\u2014the lip sync is lagging. Pretty sure it's a deepfake, but my dad is convinced it's real because 'the CEO said it.' This is getting dangerous.",
+    "timestamp": "31-01-2026 16:49:02",
+    "comments": [
+      {
+        "comment_id": 80,
+        "parent_comment_id": null,
+        "handler_id": "Anonymous",
+        "type": "comment",
+        "comment": "100% a deepfake. I saw the same video but with a different celebrity last week.",
+        "timestamp": "31-01-2026 16:49:03"
+      },
+      {
+        "comment_id": 81,
+        "parent_comment_id": 80,
+        "handler_id": "Anonymous",
+        "type": "reply",
+        "comment": "It's terrifying how real the voice sounds though. We need an official denial ASAP.",
+        "timestamp": "31-01-2026 16:49:04"
+      },
+      {
+        "comment_id": 82,
+        "parent_comment_id": null,
+        "handler_id": "Anonymous",
+        "type": "comment",
+        "comment": "Report the ad to the platform immediately. Banks never guarantee returns like that.",
+        "timestamp": "31-01-2026 16:49:05"
+      }
+    ]
+  },
+  {
+    "post_id": 13,
+    "channel": "social",
+    "author": "@DigitalNomad_User",
+    "content": "Getting WhatsApp messages from a 'Bank Support Agent' with a verified checkmark (in the profile pic, not the actual badge). They are saying a large international transfer was flagged and I need to verify my identity via a video call. Is the bank using WhatsApp for official compliance checks now? Seems sketchy. \ud83e\udd28",
+    "timestamp": "31-01-2026 16:49:06",
+    "comments": [
+      {
+        "comment_id": 83,
+        "parent_comment_id": null,
+        "handler_id": "Anonymous",
+        "type": "comment",
+        "comment": "Absolutely not. No bank conducts compliance checks via WhatsApp video calls. Block them.",
+        "timestamp": "31-01-2026 16:49:07"
+      },
+      {
+        "comment_id": 84,
+        "parent_comment_id": 83,
+        "handler_id": "Anonymous",
+        "type": "reply",
+        "comment": "Thought so. They were very aggressive when I asked for an email confirmation.",
+        "timestamp": "31-01-2026 16:49:08"
+      },
+      {
+        "comment_id": 85,
+        "parent_comment_id": 83,
+        "handler_id": "Anonymous",
+        "type": "reply",
+        "comment": "They record your face in the video call to use for biometric bypasses on other apps. Be careful!",
+        "timestamp": "31-01-2026 16:49:09"
+      }
+    ]
+  },
+  {
+    "post_id": 14,
+    "channel": "banking",
+    "author": "@SecureBankingAlerts",
+    "content": "SECURITY ALERT: We are receiving reports of callers impersonating bank staff claiming your 'KYC is pending' or 'Account Suspended' to steal OTPs. \ud83d\udeab The callers often use fear tactics to pressure you into acting fast. Remember: Bank staff will NEVER ask for your OTP, PIN, or Password over the phone. If you are unsure, hang up and call the number on the back of your card.",
+    "timestamp": "31-01-2026 16:49:10",
+    "comments": [
+      {
+        "comment_id": 86,
+        "parent_comment_id": null,
+        "handler_id": "Anonymous",
+        "type": "comment",
+        "comment": "I wish I saw this yesterday. They sounded so professional, even had my name right.",
+        "timestamp": "31-01-2026 16:49:11"
+      },
+      {
+        "comment_id": 87,
+        "parent_comment_id": null,
+        "handler_id": "Anonymous",
+        "type": "comment",
+        "comment": "Thanks for the reminder. I've told my parents to ignore unknown numbers.",
+        "timestamp": "31-01-2026 16:49:12"
+      },
+      {
+        "comment_id": 88,
+        "parent_comment_id": null,
+        "handler_id": "Anonymous",
+        "type": "comment",
+        "comment": "Is there a way to report these numbers directly in the app?",
+        "timestamp": "31-01-2026 16:49:13"
+      }
+    ]
+  },
+  {
+    "post_id": 15,
+    "channel": "banking",
+    "author": "@BankOfficial",
+    "content": "CLARIFICATION: We are NOT running a 'Gold Rewards Points Expiry' campaign via SMS. \u274c Any message containing links to 'mashreq-rewards-update.com' or similar variations is fraudulent. Do not click these links or enter your card details. We are working with authorities to take down these phishing sites. Please conduct all reward redemptions strictly through our official mobile app.",
+    "timestamp": "31-01-2026 16:49:14",
+    "comments": [
+      {
+        "comment_id": 89,
+        "parent_comment_id": null,
+        "handler_id": "Anonymous",
+        "type": "comment",
+        "comment": "Thank you for the official statement! Sharing this with my family group chat.",
+        "timestamp": "31-01-2026 16:49:15"
+      },
+      {
+        "comment_id": 90,
+        "parent_comment_id": 89,
+        "handler_id": "Anonymous",
+        "type": "reply",
+        "comment": "Finally! This should have been posted yesterday when the texts started going out.",
+        "timestamp": "31-01-2026 16:49:16"
+      },
+      {
+        "comment_id": 91,
+        "parent_comment_id": 90,
+        "handler_id": "Anonymous",
+        "type": "reply",
+        "comment": "Good swift action. The phishing site seems to be down already.",
+        "timestamp": "31-01-2026 16:49:17"
+      }
+    ]
+  },
+  {
+    "post_id": 16,
+    "channel": "banking",
+    "author": "@BankSupport",
+    "content": "SCAM WARNING: Be aware of AI-generated videos (Deepfakes) circulating on social media featuring bank executives promoting 'Investment Bots'. \ud83d\udcc9 These are fake. We do not endorse third-party trading bots or guarantee fixed high returns. Always verify investment offers through our official website or your relationship manager.",
+    "timestamp": "31-01-2026 16:49:18",
+    "comments": [
+      {
+        "comment_id": 92,
+        "parent_comment_id": null,
+        "handler_id": "Anonymous",
+        "type": "comment",
+        "comment": "Thanks for confirming. It was a very convincing video.",
+        "timestamp": "31-01-2026 16:49:19"
+      },
+      {
+        "comment_id": 93,
+        "parent_comment_id": 92,
+        "handler_id": "Anonymous",
+        "type": "reply",
+        "comment": "How do we report these videos when we see them on other platforms?",
+        "timestamp": "31-01-2026 16:49:20"
+      }
+    ]
+  },
+  {
+    "post_id": 17,
+    "channel": "fraud-watch",
+    "author": "@SecurityAlert",
+    "content": "@SecurityAlert says: URGENT! Received suspicious SMS claiming Mashreq Gold Rewards expiring. DO NOT CLICK the link mashreq-rewards-portal-update.com - it's a SCAM!",
+    "timestamp": "31-01-2026 17:54:45",
+    "comments": []
+  },
+  {
+    "post_id": 18,
+    "channel": "general",
+    "author": "@BankCustomer",
+    "content": "@BankCustomer says: Just got a fake Mashreq text about rewards. Almost clicked it! The website looks EXACTLY like the real one. Be careful everyone! #ScamAlert",
+    "timestamp": "31-01-2026 17:54:47",
+    "comments": []
+  },
+  {
+    "post_id": 19,
+    "channel": "fraud-watch",
+    "author": "@ConsumerWatch",
+    "content": "@ConsumerWatch says: WARNING: Phishing campaign targeting Mashreq customers. Fake SMS asks for OTP and CVV. Multiple reports in the last 2 hours. #BankingSecurity",
+    "timestamp": "31-01-2026 17:54:49",
+    "comments": []
+  },
+  {
+    "post_id": 20,
+    "channel": "general",
+    "author": "@FinanceGuru",
+    "content": "@FinanceGuru says: PSA - If you receive SMS about Mashreq rewards expiring, DELETE IT. The bank confirmed it's a phishing attempt. Don't enter any card details!",
+    "timestamp": "31-01-2026 17:54:51",
+    "comments": []
+  },
+  {
+    "post_id": 21,
+    "channel": "fraud-watch",
+    "author": "@TechSavvy",
+    "content": "@TechSavvy says: The mashreq-rewards-portal-update.com site has SSL certificate but it's FAKE. Uses exact Mashreq branding. This is a sophisticated phishing attack!",
+    "timestamp": "31-01-2026 17:54:53",
+    "comments": []
+  },
+  {
+    "post_id": 22,
+    "channel": "general",
+    "author": "@CustomerCare",
+    "content": "@CustomerCare says: Heads up - friend lost 5000 AED to fake Mashreq site today. They entered CVV thinking it was real rewards redemption. Spread the word!",
+    "timestamp": "31-01-2026 17:54:55",
+    "comments": []
+  },
+  {
+    "post_id": 23,
+    "channel": "fraud-watch",
+    "author": "@InfoSec",
+    "content": "@InfoSec says: Analyzing the Mashreq phishing SMS. It's well-crafted with urgency tactics ('24-hour expiry'). Creating panic to override critical thinking. Classic social engineering.",
+    "timestamp": "31-01-2026 17:54:57",
+    "comments": []
+  },
+  {
+    "post_id": 24,
+    "channel": "general",
+    "author": "@ConcernedUser",
+    "content": "@ConcernedUser says: Why hasn't Mashreq Bank issued an official statement about this phishing SMS? It's been spreading for hours. We need clarity! #CustomerSafety",
+    "timestamp": "31-01-2026 17:54:59",
+    "comments": []
+  },
+  {
+    "post_id": 25,
+    "channel": "fraud-watch",
+    "author": "@MobileUser",
+    "content": "@MobileUser says: Got the same fake Mashreq SMS. Reported it to UAE cybercrime. Everyone should report this - the more reports, the faster the domain gets blocked.",
+    "timestamp": "31-01-2026 17:55:01",
+    "comments": []
+  },
+  {
+    "post_id": 26,
+    "channel": "fraud-watch",
+    "author": "@BankingExpert",
+    "content": "@BankingExpert says: This Mashreq phishing campaign is particularly dangerous because: 1) Perfect branding match 2) SSL certificate 3) Urgent deadline 4) Targets loyalty program. Very professional.",
+    "timestamp": "31-01-2026 17:55:03",
+    "comments": []
+  },
+  {
+    "post_id": 27,
+    "channel": "fraud-watch",
+    "author": "@SecurityAlert",
+    "content": "@SecurityAlert says: URGENT! Received suspicious SMS claiming Mashreq Gold Rewards expiring. DO NOT CLICK the link mashreq-rewards-portal-update.com - it's a SCAM!",
+    "timestamp": "31-01-2026 18:01:18",
+    "comments": []
+  },
+  {
+    "post_id": 28,
+    "channel": "general",
+    "author": "@BankCustomer",
+    "content": "@BankCustomer says: Just got a fake Mashreq text about rewards. Almost clicked it! The website looks EXACTLY like the real one. Be careful everyone! #ScamAlert",
+    "timestamp": "31-01-2026 18:01:20",
+    "comments": []
+  },
+  {
+    "post_id": 29,
+    "channel": "fraud-watch",
+    "author": "@ConsumerWatch",
+    "content": "@ConsumerWatch says: WARNING: Phishing campaign targeting Mashreq customers. Fake SMS asks for OTP and CVV. Multiple reports in the last 2 hours. #BankingSecurity",
+    "timestamp": "31-01-2026 18:01:22",
+    "comments": []
+  },
+  {
+    "post_id": 30,
+    "channel": "general",
+    "author": "@FinanceGuru",
+    "content": "@FinanceGuru says: PSA - If you receive SMS about Mashreq rewards expiring, DELETE IT. The bank confirmed it's a phishing attempt. Don't enter any card details!",
+    "timestamp": "31-01-2026 18:01:24",
+    "comments": []
+  },
+  {
+    "post_id": 31,
+    "channel": "fraud-watch",
+    "author": "@TechSavvy",
+    "content": "@TechSavvy says: The mashreq-rewards-portal-update.com site has SSL certificate but it's FAKE. Uses exact Mashreq branding. This is a sophisticated phishing attack!",
+    "timestamp": "31-01-2026 18:01:27",
+    "comments": []
+  },
+  {
+    "post_id": 32,
+    "channel": "general",
+    "author": "@CustomerCare",
+    "content": "@CustomerCare says: Heads up - friend lost 5000 AED to fake Mashreq site today. They entered CVV thinking it was real rewards redemption. Spread the word!",
+    "timestamp": "31-01-2026 18:01:29",
+    "comments": []
+  },
+  {
+    "post_id": 33,
+    "channel": "fraud-watch",
+    "author": "@InfoSec",
+    "content": "@InfoSec says: Analyzing the Mashreq phishing SMS. It's well-crafted with urgency tactics ('24-hour expiry'). Creating panic to override critical thinking. Classic social engineering.",
+    "timestamp": "31-01-2026 18:01:31",
+    "comments": []
+  },
+  {
+    "post_id": 34,
+    "channel": "general",
+    "author": "@ConcernedUser",
+    "content": "@ConcernedUser says: Why hasn't Mashreq Bank issued an official statement about this phishing SMS? It's been spreading for hours. We need clarity! #CustomerSafety",
+    "timestamp": "31-01-2026 18:01:33",
+    "comments": []
+  },
+  {
+    "post_id": 35,
+    "channel": "fraud-watch",
+    "author": "@MobileUser",
+    "content": "@MobileUser says: Got the same fake Mashreq SMS. Reported it to UAE cybercrime. Everyone should report this - the more reports, the faster the domain gets blocked.",
+    "timestamp": "31-01-2026 18:01:35",
+    "comments": []
+  },
+  {
+    "post_id": 36,
+    "channel": "fraud-watch",
+    "author": "@BankingExpert",
+    "content": "@BankingExpert says: This Mashreq phishing campaign is particularly dangerous because: 1) Perfect branding match 2) SSL certificate 3) Urgent deadline 4) Targets loyalty program. Very professional.",
+    "timestamp": "31-01-2026 18:01:37",
+    "comments": []
+  }
+]
