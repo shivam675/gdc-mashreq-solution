@@ -1,10 +1,10 @@
 [
   {
     "post_id": 1,
-    "channel": "threadit",
-    "author": "@FakeBankRep",
-    "content": "@FakeBankRep says: Dear customer, update your KYC immediately or account will be closed. Visit: mashreq-kyc-update.net",
-    "timestamp": "01-02-2026 05:33:30",
+    "channel": "linkedup",
+    "author": "@BrandHijacker",
+    "content": "@BrandHijacker says: I'm Mashreq Bank manager. Send me your OTP to fix account issue immediately!",
+    "timestamp": "01-02-2026 07:28:23",
     "comments": [
       {
         "comment_id": 1,
@@ -12,130 +12,114 @@
         "handler_id": "@Worried",
         "type": "comment",
         "comment": "This is getting out of hand. Banks need better security.",
-        "timestamp": "01-02-2026 05:33:31"
+        "timestamp": "01-02-2026 07:28:23"
       },
       {
         "comment_id": 2,
         "parent_comment_id": null,
-        "handler_id": "@Agreeing",
+        "handler_id": "@Curious",
         "type": "comment",
-        "comment": "Yes, I've seen this scam circulating on WhatsApp too.",
-        "timestamp": "01-02-2026 05:33:31"
+        "comment": "How can we verify if a message is actually from Mashreq?",
+        "timestamp": "01-02-2026 07:28:24"
       },
       {
         "comment_id": 3,
         "parent_comment_id": null,
-        "handler_id": "@Responder",
+        "handler_id": "@Supporter",
         "type": "comment",
-        "comment": "I experienced the same thing yesterday.",
-        "timestamp": "01-02-2026 05:33:32"
-      },
+        "comment": "Always check the official website before clicking any links.",
+        "timestamp": "01-02-2026 07:28:24"
+      }
+    ]
+  },
+  {
+    "post_id": 2,
+    "channel": "linkedup",
+    "author": "@LoyalClient",
+    "content": "@LoyalClient says: Been with Mashreq for 10 years. Best banking experience!",
+    "timestamp": "01-02-2026 07:28:25",
+    "comments": [
       {
         "comment_id": 4,
         "parent_comment_id": null,
         "handler_id": "@Agreeing",
         "type": "comment",
         "comment": "Yes, I've seen this scam circulating on WhatsApp too.",
-        "timestamp": "01-02-2026 05:33:32"
+        "timestamp": "01-02-2026 07:28:26"
+      },
+      {
+        "comment_id": 5,
+        "parent_comment_id": null,
+        "handler_id": "@Worried",
+        "type": "comment",
+        "comment": "This is getting out of hand. Banks need better security.",
+        "timestamp": "01-02-2026 07:28:26"
       }
     ]
   },
   {
-    "post_id": 2,
-    "channel": "threadit",
-    "author": "@GeneralQuery",
-    "content": "@GeneralQuery says: Can someone explain the difference between current and savings accounts?",
-    "timestamp": "01-02-2026 05:33:33",
-    "comments": []
-  },
-  {
     "post_id": 3,
-    "channel": "threadit",
-    "author": "@ImpersonatorBot",
-    "content": "@ImpersonatorBot says: Mashreq Bank Official: You've won $10,000! Click link to claim: mashreq-lottery.com/claim",
-    "timestamp": "01-02-2026 05:33:35",
+    "channel": "photogram",
+    "author": "@FraudAlert",
+    "content": "@FraudAlert says: WARNING: Fake SMS campaign asking for CVV codes claiming to be from Mashreq Bank. Do NOT share your details!",
+    "timestamp": "01-02-2026 07:28:27",
     "comments": [
       {
-        "comment_id": 5,
-        "parent_comment_id": null,
-        "handler_id": "@Responder",
-        "type": "comment",
-        "comment": "I experienced the same thing yesterday.",
-        "timestamp": "01-02-2026 05:33:35"
-      },
-      {
         "comment_id": 6,
-        "parent_comment_id": null,
-        "handler_id": "@Commenter1",
-        "type": "comment",
-        "comment": "This is concerning. Thanks for sharing!",
-        "timestamp": "01-02-2026 05:33:35"
-      },
-      {
-        "comment_id": 7,
         "parent_comment_id": null,
         "handler_id": "@Agreeing",
         "type": "comment",
         "comment": "Yes, I've seen this scam circulating on WhatsApp too.",
-        "timestamp": "01-02-2026 05:33:36"
+        "timestamp": "01-02-2026 07:28:28"
+      },
+      {
+        "comment_id": 7,
+        "parent_comment_id": null,
+        "handler_id": "@Curious",
+        "type": "comment",
+        "comment": "How can we verify if a message is actually from Mashreq?",
+        "timestamp": "01-02-2026 07:28:28"
       },
       {
         "comment_id": 8,
         "parent_comment_id": null,
-        "handler_id": "@Supporter",
+        "handler_id": "@Responder",
         "type": "comment",
-        "comment": "Always check the official website before clicking any links.",
-        "timestamp": "01-02-2026 05:33:36"
+        "comment": "I experienced the same thing yesterday.",
+        "timestamp": "01-02-2026 07:28:28"
       }
     ]
   },
   {
     "post_id": 4,
-    "channel": "linkedup",
-    "author": "@FraudAlert",
-    "content": "@FraudAlert says: WARNING: Fake SMS campaign asking for CVV codes claiming to be from Mashreq Bank. Do NOT share your details!",
-    "timestamp": "01-02-2026 05:33:37",
+    "channel": "chirper",
+    "author": "@ImpersonatorBot",
+    "content": "@ImpersonatorBot says: Mashreq Bank Official: You've won $10,000! Click link to claim: mashreq-lottery.com/claim",
+    "timestamp": "01-02-2026 07:28:30",
     "comments": [
       {
         "comment_id": 9,
         "parent_comment_id": null,
-        "handler_id": "@Agreeing",
+        "handler_id": "@Curious",
         "type": "comment",
-        "comment": "Yes, I've seen this scam circulating on WhatsApp too.",
-        "timestamp": "01-02-2026 05:33:38"
+        "comment": "How can we verify if a message is actually from Mashreq?",
+        "timestamp": "01-02-2026 07:28:30"
       },
       {
         "comment_id": 10,
         "parent_comment_id": null,
-        "handler_id": "@Curious",
+        "handler_id": "@Helper",
         "type": "comment",
-        "comment": "How can we verify if a message is actually from Mashreq?",
-        "timestamp": "01-02-2026 05:33:38"
-      }
-    ]
-  },
-  {
-    "post_id": 5,
-    "channel": "facespace",
-    "author": "@TravelBlogger",
-    "content": "@TravelBlogger says: Using Mashreq card abroad - no issues at all. Recommended!",
-    "timestamp": "01-02-2026 05:33:39",
-    "comments": []
-  },
-  {
-    "post_id": 6,
-    "channel": "facespace",
-    "author": "@TechEnthusiast",
-    "content": "@TechEnthusiast says: The biometric login on Mashreq app works perfectly. Very secure!",
-    "timestamp": "01-02-2026 05:33:41",
-    "comments": [
+        "comment": "You should report this to the official Mashreq fraud hotline.",
+        "timestamp": "01-02-2026 07:28:30"
+      },
       {
         "comment_id": 11,
         "parent_comment_id": null,
-        "handler_id": "@Curious",
+        "handler_id": "@Worried",
         "type": "comment",
-        "comment": "How can we verify if a message is actually from Mashreq?",
-        "timestamp": "01-02-2026 05:33:41"
+        "comment": "This is getting out of hand. Banks need better security.",
+        "timestamp": "01-02-2026 07:28:31"
       },
       {
         "comment_id": 12,
@@ -143,32 +127,41 @@
         "handler_id": "@Helper",
         "type": "comment",
         "comment": "You should report this to the official Mashreq fraud hotline.",
-        "timestamp": "01-02-2026 05:33:41"
+        "timestamp": "01-02-2026 07:28:31"
       }
     ]
   },
   {
-    "post_id": 7,
-    "channel": "threadit",
-    "author": "@ScamReporter",
-    "content": "@ScamReporter says: I received a call from someone pretending to be Mashreq support asking for my card PIN. This is a scam!",
-    "timestamp": "01-02-2026 05:33:43",
+    "post_id": 5,
+    "channel": "linkedup",
+    "author": "@TechEnthusiast",
+    "content": "@TechEnthusiast says: The biometric login on Mashreq app works perfectly. Very secure!",
+    "timestamp": "01-02-2026 07:28:32",
     "comments": [
       {
         "comment_id": 13,
         "parent_comment_id": null,
-        "handler_id": "@Worried",
+        "handler_id": "@Helper",
         "type": "comment",
-        "comment": "This is getting out of hand. Banks need better security.",
-        "timestamp": "01-02-2026 05:33:43"
-      },
+        "comment": "You should report this to the official Mashreq fraud hotline.",
+        "timestamp": "01-02-2026 07:28:33"
+      }
+    ]
+  },
+  {
+    "post_id": 6,
+    "channel": "chirper",
+    "author": "@AppUser",
+    "content": "@AppUser says: Quick question - what are the new savings account rates?",
+    "timestamp": "01-02-2026 07:28:34",
+    "comments": [
       {
         "comment_id": 14,
         "parent_comment_id": null,
-        "handler_id": "@Worried",
+        "handler_id": "@Curious",
         "type": "comment",
-        "comment": "This is getting out of hand. Banks need better security.",
-        "timestamp": "01-02-2026 05:33:43"
+        "comment": "How can we verify if a message is actually from Mashreq?",
+        "timestamp": "01-02-2026 07:28:35"
       },
       {
         "comment_id": 15,
@@ -176,123 +169,165 @@
         "handler_id": "@Curious",
         "type": "comment",
         "comment": "How can we verify if a message is actually from Mashreq?",
-        "timestamp": "01-02-2026 05:33:44"
+        "timestamp": "01-02-2026 07:28:35"
+      }
+    ]
+  },
+  {
+    "post_id": 7,
+    "channel": "photogram",
+    "author": "@TravelBlogger",
+    "content": "@TravelBlogger says: Using Mashreq card abroad - no issues at all. Recommended!",
+    "timestamp": "01-02-2026 07:28:36",
+    "comments": [
+      {
+        "comment_id": 16,
+        "parent_comment_id": null,
+        "handler_id": "@Helper",
+        "type": "comment",
+        "comment": "You should report this to the official Mashreq fraud hotline.",
+        "timestamp": "01-02-2026 07:28:37"
+      },
+      {
+        "comment_id": 17,
+        "parent_comment_id": null,
+        "handler_id": "@Commenter1",
+        "type": "comment",
+        "comment": "This is concerning. Thanks for sharing!",
+        "timestamp": "01-02-2026 07:28:37"
       }
     ]
   },
   {
     "post_id": 8,
-    "channel": "photogram",
-    "author": "@FeatureRequest",
-    "content": "@FeatureRequest says: Would be great to have dark mode in the app!",
-    "timestamp": "01-02-2026 05:33:45",
+    "channel": "chirper",
+    "author": "@GeneralQuery",
+    "content": "@GeneralQuery says: Can someone explain the difference between current and savings accounts?",
+    "timestamp": "01-02-2026 07:28:38",
     "comments": [
       {
-        "comment_id": 16,
+        "comment_id": 18,
         "parent_comment_id": null,
-        "handler_id": "@Agreeing",
+        "handler_id": "@Worried",
         "type": "comment",
-        "comment": "Yes, I've seen this scam circulating on WhatsApp too.",
-        "timestamp": "01-02-2026 05:33:45"
+        "comment": "This is getting out of hand. Banks need better security.",
+        "timestamp": "01-02-2026 07:28:39"
       }
     ]
   },
   {
     "post_id": 9,
+    "channel": "chirper",
+    "author": "@SatisfiedUser",
+    "content": "@SatisfiedUser says: Love the new mobile app features. Banking is so much easier now!",
+    "timestamp": "01-02-2026 07:28:40",
+    "comments": []
+  },
+  {
+    "post_id": 10,
     "channel": "linkedup",
-    "author": "@SuspiciousUser",
-    "content": "@SuspiciousUser says: Free iPhone 15 for first 100 Mashreq customers! Share your card number here: bit.ly/mashreq-prize",
-    "timestamp": "01-02-2026 05:33:47",
+    "author": "@UrgentAlert",
+    "content": "@UrgentAlert says: CRITICAL: Suspicious activity on your account. Verify your CVV and PIN now: secure-mashreq-verify.com",
+    "timestamp": "01-02-2026 07:28:41",
     "comments": [
-      {
-        "comment_id": 17,
-        "parent_comment_id": null,
-        "handler_id": "@Worried",
-        "type": "comment",
-        "comment": "This is getting out of hand. Banks need better security.",
-        "timestamp": "01-02-2026 05:33:47"
-      },
-      {
-        "comment_id": 18,
-        "parent_comment_id": null,
-        "handler_id": "@Commenter1",
-        "type": "comment",
-        "comment": "This is concerning. Thanks for sharing!",
-        "timestamp": "01-02-2026 05:33:47"
-      },
       {
         "comment_id": 19,
         "parent_comment_id": null,
-        "handler_id": "@Worried",
+        "handler_id": "@Curious",
         "type": "comment",
-        "comment": "This is getting out of hand. Banks need better security.",
-        "timestamp": "01-02-2026 05:33:48"
+        "comment": "How can we verify if a message is actually from Mashreq?",
+        "timestamp": "01-02-2026 07:28:42"
       },
       {
         "comment_id": 20,
         "parent_comment_id": null,
-        "handler_id": "@Helper",
+        "handler_id": "@Curious",
         "type": "comment",
-        "comment": "You should report this to the official Mashreq fraud hotline.",
-        "timestamp": "01-02-2026 05:33:48"
-      }
-    ]
-  },
-  {
-    "post_id": 10,
-    "channel": "photogram",
-    "author": "@SatisfiedUser",
-    "content": "@SatisfiedUser says: Love the new mobile app features. Banking is so much easier now!",
-    "timestamp": "01-02-2026 05:33:50",
-    "comments": [
+        "comment": "How can we verify if a message is actually from Mashreq?",
+        "timestamp": "01-02-2026 07:28:42"
+      },
       {
         "comment_id": 21,
         "parent_comment_id": null,
-        "handler_id": "@Agreeing",
+        "handler_id": "@Supporter",
         "type": "comment",
-        "comment": "Yes, I've seen this scam circulating on WhatsApp too.",
-        "timestamp": "01-02-2026 05:33:50"
-      },
-      {
-        "comment_id": 22,
-        "parent_comment_id": null,
-        "handler_id": "@Commenter1",
-        "type": "comment",
-        "comment": "This is concerning. Thanks for sharing!",
-        "timestamp": "01-02-2026 05:33:50"
+        "comment": "Always check the official website before clicking any links.",
+        "timestamp": "01-02-2026 07:28:42"
       }
     ]
   },
   {
     "post_id": 11,
-    "channel": "facespace",
-    "author": "@LoyalClient",
-    "content": "@LoyalClient says: Been with Mashreq for 10 years. Best banking experience!",
-    "timestamp": "01-02-2026 05:33:52",
-    "comments": []
+    "channel": "threadit",
+    "author": "@PhishingScammer",
+    "content": "@PhishingScammer says: Urgent! Your Mashreq account has been suspended. Click here to verify: mashreq-rewards-portal.com/verify. Act now!",
+    "timestamp": "01-02-2026 07:28:44",
+    "comments": [
+      {
+        "comment_id": 22,
+        "parent_comment_id": null,
+        "handler_id": "@Curious",
+        "type": "comment",
+        "comment": "How can we verify if a message is actually from Mashreq?",
+        "timestamp": "01-02-2026 07:28:44"
+      },
+      {
+        "comment_id": 23,
+        "parent_comment_id": null,
+        "handler_id": "@Commenter1",
+        "type": "comment",
+        "comment": "This is concerning. Thanks for sharing!",
+        "timestamp": "01-02-2026 07:28:44"
+      },
+      {
+        "comment_id": 24,
+        "parent_comment_id": null,
+        "handler_id": "@Worried",
+        "type": "comment",
+        "comment": "This is getting out of hand. Banks need better security.",
+        "timestamp": "01-02-2026 07:28:45"
+      },
+      {
+        "comment_id": 25,
+        "parent_comment_id": null,
+        "handler_id": "@Commenter1",
+        "type": "comment",
+        "comment": "This is concerning. Thanks for sharing!",
+        "timestamp": "01-02-2026 07:28:45"
+      }
+    ]
   },
   {
     "post_id": 12,
-    "channel": "facespace",
+    "channel": "linkedup",
     "author": "@HappyCustomer",
     "content": "@HappyCustomer says: Great service at Mashreq branch today! The staff was very helpful.",
-    "timestamp": "01-02-2026 05:33:53",
-    "comments": []
+    "timestamp": "01-02-2026 07:28:47",
+    "comments": [
+      {
+        "comment_id": 26,
+        "parent_comment_id": null,
+        "handler_id": "@Worried",
+        "type": "comment",
+        "comment": "This is getting out of hand. Banks need better security.",
+        "timestamp": "01-02-2026 07:28:47"
+      },
+      {
+        "comment_id": 27,
+        "parent_comment_id": null,
+        "handler_id": "@Thankful",
+        "type": "comment",
+        "comment": "Thank you for the warning!",
+        "timestamp": "01-02-2026 07:28:47"
+      }
+    ]
   },
   {
     "post_id": 13,
-    "channel": "chirper",
-    "author": "@AppUser",
-    "content": "@AppUser says: Quick question - what are the new savings account rates?",
-    "timestamp": "01-02-2026 05:33:54",
-    "comments": []
-  },
-  {
-    "post_id": 14,
-    "channel": "bank-official",
-    "author": "Anonymous",
-    "content": "**Dear valued customers,**\n\nWe are aware of recent reports circulating online regarding what appears to be fraudulent activity targeting individuals. While we cannot confirm the specifics of these claims at this time, we want to reassure you that **Mashreq Bank remains fully committed to protecting your financial security and trust**.\n\nOur security team is actively monitoring these concerns, and we have implemented robust safeguards to safeguard against fraud and unauthorized access. We encourage everyone to remain vigilant\u2014never share sensitive information like card details or verification codes with anyone, regardless of the request.\n\nIf you have any concerns or notice unusual activity, we urge you to contact our customer service immediately at **[contact number]**. Your safety and peace of mind are our top priorities.\n\nThank you for trusting Mashreq Bank. Together, we can continue to uphold a secure banking experience.\n\n**Stay safe, stay informed.**\n\n*For questions, reach out to us at [contact details].*",
-    "timestamp": "01-02-2026 05:35:34",
+    "channel": "photogram",
+    "author": "@FeatureRequest",
+    "content": "@FeatureRequest says: Would be great to have dark mode in the app!",
+    "timestamp": "01-02-2026 07:28:49",
     "comments": []
   }
 ]
