@@ -6,6 +6,14 @@
 
 ---
 
+## 🎥 Demo
+
+![SLM Desk Demo](demo.gif)
+
+*Watch how SLM Desk detects fraud threats on social media and empowers operators with explainable AI insights*
+
+---
+
 ## 📋 Table of Contents
 - [Problem Statement](#-problem-statement)
 - [Solution Overview](#-solution-overview)
