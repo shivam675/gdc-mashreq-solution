@@ -23,7 +23,7 @@ export default function ExecutiveDashboard() {
     avg_response_time_hours: 2.4,
     top_concerns: [
       { concern: 'Phishing SMS Campaign', count: 15, risk: 'CRITICAL' },
-      { concern: 'Fake Website (mashreq-rewards-portal.com)', count: 12, risk: 'HIGH' },
+      { concern: 'Fake Website (gbank-rewards-portal.com)', count: 12, risk: 'HIGH' },
       { concern: 'CVV Disclosure Tactics', count: 8, risk: 'HIGH' },
       { concern: 'Urgency-Based Social Engineering', count: 5, risk: 'MEDIUM' },
       { concern: 'Brand Impersonation', count: 2, risk: 'MEDIUM' },
@@ -302,32 +302,6 @@ export default function ExecutiveDashboard() {
               <span className="text-white text-xl font-bold">{summary.signals_detected}</span>
             </div>
           </div>
-        </div>
-      </div>
-
-      {/* Signal Trend Chart */}
-      <div className="bg-slate-800 border border-slate-700 rounded-lg p-6">
-        <h3 className="text-lg font-semibold text-white mb-6">Signal Detection Trend</h3>
-        
-        <div className="flex items-end justify-between h-48 space-x-2">
-          {summary.trend_data.map((day, index) => {
-            const maxSignals = Math.max(...summary.trend_data.map(d => d.signals));
-            const height = (day.signals / maxSignals) * 100;
-            
-            return (
-              <div key={index} className="flex-1 flex flex-col items-center space-y-2">
-                <div
-                  className="w-full bg-gradient-to-t from-blue-600 to-purple-600 rounded-t-lg transition-all duration-300 hover:from-blue-500 hover:to-purple-500 cursor-pointer relative group"
-                  style={{ height: `${height}%` }}
-                >
-                  <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-slate-900 px-2 py-1 rounded text-xs text-white opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                    {day.signals} signals
-                  </div>
-                </div>
-                <span className="text-xs text-slate-400">{day.date}</span>
-              </div>
-            );
-          })}
         </div>
       </div>
 

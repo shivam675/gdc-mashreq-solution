@@ -36,7 +36,7 @@ export default function Login() {
           <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-600 rounded-xl mb-4">
             <Activity className="w-10 h-10 text-white" />
           </div>
-          <h1 className="text-3xl font-bold text-slate-900 dark:text-white mb-2">Bank Sentinel</h1>
+          <h1 className="text-3xl font-bold text-slate-900 dark:text-white mb-2">SLM Desk</h1>
           <p className="text-slate-600 dark:text-slate-400">Multi-Agent Control Panel</p>
         </div>
 
@@ -113,7 +113,7 @@ export default function Login() {
 
         {/* Footer */}
         <p className="text-center text-sm text-slate-500 dark:text-slate-400 mt-6">
-          © 2026 Bank Sentinel. All rights reserved.
+          © 2026 SLM Desk. All rights reserved.
         </p>
       </div>
     </div>

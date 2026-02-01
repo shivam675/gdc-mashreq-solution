@@ -289,9 +289,9 @@ export default function AwaitingApproval({ workflows, isLoading, refetch }: Prop
     }
 
     const workflowId = workflow.workflow_id;
-    setCountdowns((prev) => new Map(prev).set(workflowId, 5));
+    setCountdowns((prev) => new Map(prev).set(workflowId, 10));
 
-    let timeLeft = 5;
+    let timeLeft = 10;
     const timer = setInterval(() => {
       timeLeft -= 1;
       
@@ -597,7 +597,7 @@ export default function AwaitingApproval({ workflows, isLoading, refetch }: Prop
                   {/* Action Descriptions */}
                   {!isEditing && (
                     <div className="text-xs text-slate-500 space-y-1 bg-slate-900/50 rounded-lg p-3">
-                      <p>💚 <strong>Approve & Post:</strong> Publish immediately (5s countdown)</p>
+                      <p>💚 <strong>Approve & Post:</strong> Publish immediately (10s countdown)</p>
                       <p>✏️ <strong>Edit:</strong> Modify before approval</p>
                       <p>🟡 <strong>Escalate Management:</strong> Requires senior review</p>
                       <p>🟠 <strong>Escalate Legal:</strong> Requires compliance approval</p>

@@ -68,7 +68,7 @@ export default function Settings() {
           <SettingsIcon className="w-8 h-8" />
           <span>Settings</span>
         </h2>
-        <p className="text-slate-600 dark:text-slate-400 mt-1">Configure your Bank Sentinel preferences</p>
+        <p className="text-slate-600 dark:text-slate-400 mt-1">Configure your SLM Desk preferences</p>
       </div>
 
       {/* Save Confirmation */}

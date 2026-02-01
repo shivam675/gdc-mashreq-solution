@@ -18,36 +18,36 @@ CHANNELS = ["chirper", "photogram", "facespace", "linkedup", "threadit"]
 
 # Sample threat posts (for FDA to detect)
 THREAT_POSTS = [
-    "@PhishingScammer says: Urgent! Your Mashreq account has been suspended. Click here to verify: mashreq-rewards-portal.com/verify. Act now!",
-    "@FraudAlert says: WARNING: Fake SMS campaign asking for CVV codes claiming to be from Mashreq Bank. Do NOT share your details!",
-    "@ScamReporter says: I received a call from someone pretending to be Mashreq support asking for my card PIN. This is a scam!",
-    "@SuspiciousUser says: Free iPhone 15 for first 100 Mashreq customers! Share your card number here: bit.ly/mashreq-prize",
-    "@FakeBankRep says: Dear customer, update your KYC immediately or account will be closed. Visit: mashreq-kyc-update.net",
-    "@ImpersonatorBot says: Mashreq Bank Official: You've won $10,000! Click link to claim: mashreq-lottery.com/claim",
-    "@UrgentAlert says: CRITICAL: Suspicious activity on your account. Verify your CVV and PIN now: secure-mashreq-verify.com",
-    "@BrandHijacker says: I'm Mashreq Bank manager. Send me your OTP to fix account issue immediately!",
+    "@PhishingScammer says: Urgent! Your GBank account has been suspended. Click here to verify: gbank-rewards-portal.com/verify. Act now!",
+    "@FraudAlert says: WARNING: Fake SMS campaign asking for CVV codes claiming to be from GBank. Do NOT share your details!",
+    "@ScamReporter says: I received a call from someone pretending to be GBank support asking for my card PIN. This is a scam!",
+    "@SuspiciousUser says: Free iPhone 15 for first 100 GBank customers! Share your card number here: bit.ly/gbank-prize",
+    "@FakeBankRep says: Dear customer, update your KYC immediately or account will be closed. Visit: gbank-kyc-update.net",
+    "@ImpersonatorBot says: GBank Official: You've won $10,000! Click link to claim: gbank-lottery.com/claim",
+    "@UrgentAlert says: CRITICAL: Suspicious activity on your account. Verify your CVV and PIN now: secure-gbank-verify.com",
+    "@BrandHijacker says: I'm GBank manager. Send me your OTP to fix account issue immediately!",
 ]
 
 # Sample legitimate posts
 LEGITIMATE_POSTS = [
-    "@HappyCustomer says: Great service at Mashreq branch today! The staff was very helpful.",
+    "@HappyCustomer says: Great service at GBank branch today! The staff was very helpful.",
     "@SatisfiedUser says: Love the new mobile app features. Banking is so much easier now!",
-    "@TechEnthusiast says: The biometric login on Mashreq app works perfectly. Very secure!",
-    "@LoyalClient says: Been with Mashreq for 10 years. Best banking experience!",
+    "@TechEnthusiast says: The biometric login on GBank app works perfectly. Very secure!",
+    "@LoyalClient says: Been with GBank for 10 years. Best banking experience!",
     "@AppUser says: Quick question - what are the new savings account rates?",
     "@GeneralQuery says: Can someone explain the difference between current and savings accounts?",
     "@FeatureRequest says: Would be great to have dark mode in the app!",
-    "@TravelBlogger says: Using Mashreq card abroad - no issues at all. Recommended!",
+    "@TravelBlogger says: Using GBank card abroad - no issues at all. Recommended!",
 ]
 
 # Sample comments (can be added to any post)
 COMMENTS = [
     "@Commenter1 says: This is concerning. Thanks for sharing!",
     "@Responder says: I experienced the same thing yesterday.",
-    "@Helper says: You should report this to the official Mashreq fraud hotline.",
+    "@Helper says: You should report this to the official GBank fraud hotline.",
     "@Agreeing says: Yes, I've seen this scam circulating on WhatsApp too.",
     "@Thankful says: Thank you for the warning!",
-    "@Curious says: How can we verify if a message is actually from Mashreq?",
+    "@Curious says: How can we verify if a message is actually from GBank?",
     "@Supporter says: Always check the official website before clicking any links.",
     "@Worried says: This is getting out of hand. Banks need better security.",
 ]
@@ -56,8 +56,8 @@ COMMENTS = [
 REPLIES = [
     "@ReplyBot says: Good point! Always verify through official channels.",
     "@Agreement says: Exactly! Never share OTP or PIN with anyone.",
-    "@InfoProvider says: Mashreq will never ask for CVV or PIN via SMS/call.",
-    "@Advisor says: Report suspicious messages to cyber@mashreq.com",
+    "@InfoProvider says: GBank will never ask for CVV or PIN via SMS/call.",
+    "@Advisor says: Report suspicious messages to cyber@gbank.com",
 ]
 
 

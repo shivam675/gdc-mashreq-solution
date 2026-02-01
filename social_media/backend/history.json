@@ -1,26 +1,34 @@
 [
   {
     "post_id": 1,
-    "channel": "linkedup",
-    "author": "@BrandHijacker",
-    "content": "@BrandHijacker says: I'm Mashreq Bank manager. Send me your OTP to fix account issue immediately!",
-    "timestamp": "01-02-2026 07:28:23",
+    "channel": "facespace",
+    "author": "@TechEnthusiast",
+    "content": "@TechEnthusiast says: The biometric login on GBank app works perfectly. Very secure!",
+    "timestamp": "01-02-2026 09:15:24",
+    "comments": []
+  },
+  {
+    "post_id": 2,
+    "channel": "photogram",
+    "author": "@UrgentAlert",
+    "content": "@UrgentAlert says: CRITICAL: Suspicious activity on your account. Verify your CVV and PIN now: secure-gbank-verify.com",
+    "timestamp": "01-02-2026 09:15:26",
     "comments": [
       {
         "comment_id": 1,
         "parent_comment_id": null,
-        "handler_id": "@Worried",
+        "handler_id": "@Helper",
         "type": "comment",
-        "comment": "This is getting out of hand. Banks need better security.",
-        "timestamp": "01-02-2026 07:28:23"
+        "comment": "You should report this to the official GBank fraud hotline.",
+        "timestamp": "01-02-2026 09:15:26"
       },
       {
         "comment_id": 2,
         "parent_comment_id": null,
-        "handler_id": "@Curious",
+        "handler_id": "@Supporter",
         "type": "comment",
-        "comment": "How can we verify if a message is actually from Mashreq?",
-        "timestamp": "01-02-2026 07:28:24"
+        "comment": "Always check the official website before clicking any links.",
+        "timestamp": "01-02-2026 09:15:26"
       },
       {
         "comment_id": 3,
@@ -28,306 +36,546 @@
         "handler_id": "@Supporter",
         "type": "comment",
         "comment": "Always check the official website before clicking any links.",
-        "timestamp": "01-02-2026 07:28:24"
-      }
-    ]
-  },
-  {
-    "post_id": 2,
-    "channel": "linkedup",
-    "author": "@LoyalClient",
-    "content": "@LoyalClient says: Been with Mashreq for 10 years. Best banking experience!",
-    "timestamp": "01-02-2026 07:28:25",
-    "comments": [
+        "timestamp": "01-02-2026 09:15:27"
+      },
       {
         "comment_id": 4,
         "parent_comment_id": null,
-        "handler_id": "@Agreeing",
+        "handler_id": "@Helper",
         "type": "comment",
-        "comment": "Yes, I've seen this scam circulating on WhatsApp too.",
-        "timestamp": "01-02-2026 07:28:26"
-      },
-      {
-        "comment_id": 5,
-        "parent_comment_id": null,
-        "handler_id": "@Worried",
-        "type": "comment",
-        "comment": "This is getting out of hand. Banks need better security.",
-        "timestamp": "01-02-2026 07:28:26"
+        "comment": "You should report this to the official GBank fraud hotline.",
+        "timestamp": "01-02-2026 09:15:27"
       }
     ]
   },
   {
     "post_id": 3,
-    "channel": "photogram",
-    "author": "@FraudAlert",
-    "content": "@FraudAlert says: WARNING: Fake SMS campaign asking for CVV codes claiming to be from Mashreq Bank. Do NOT share your details!",
-    "timestamp": "01-02-2026 07:28:27",
+    "channel": "chirper",
+    "author": "@ImpersonatorBot",
+    "content": "@ImpersonatorBot says: GBank Official: You've won $10,000! Click link to claim: gbank-lottery.com/claim",
+    "timestamp": "01-02-2026 09:15:28",
     "comments": [
+      {
+        "comment_id": 5,
+        "parent_comment_id": null,
+        "handler_id": "@Curious",
+        "type": "comment",
+        "comment": "How can we verify if a message is actually from GBank?",
+        "timestamp": "01-02-2026 09:15:29"
+      },
       {
         "comment_id": 6,
         "parent_comment_id": null,
-        "handler_id": "@Agreeing",
+        "handler_id": "@Worried",
         "type": "comment",
-        "comment": "Yes, I've seen this scam circulating on WhatsApp too.",
-        "timestamp": "01-02-2026 07:28:28"
+        "comment": "This is getting out of hand. Banks need better security.",
+        "timestamp": "01-02-2026 09:15:29"
       },
       {
         "comment_id": 7,
         "parent_comment_id": null,
-        "handler_id": "@Curious",
+        "handler_id": "@Helper",
         "type": "comment",
-        "comment": "How can we verify if a message is actually from Mashreq?",
-        "timestamp": "01-02-2026 07:28:28"
-      },
-      {
-        "comment_id": 8,
-        "parent_comment_id": null,
-        "handler_id": "@Responder",
-        "type": "comment",
-        "comment": "I experienced the same thing yesterday.",
-        "timestamp": "01-02-2026 07:28:28"
+        "comment": "You should report this to the official GBank fraud hotline.",
+        "timestamp": "01-02-2026 09:15:29"
       }
     ]
   },
   {
     "post_id": 4,
     "channel": "chirper",
-    "author": "@ImpersonatorBot",
-    "content": "@ImpersonatorBot says: Mashreq Bank Official: You've won $10,000! Click link to claim: mashreq-lottery.com/claim",
-    "timestamp": "01-02-2026 07:28:30",
+    "author": "@SuspiciousUser",
+    "content": "@SuspiciousUser says: Free iPhone 15 for first 100 GBank customers! Share your card number here: bit.ly/gbank-prize",
+    "timestamp": "01-02-2026 09:15:31",
     "comments": [
+      {
+        "comment_id": 8,
+        "parent_comment_id": null,
+        "handler_id": "@Thankful",
+        "type": "comment",
+        "comment": "Thank you for the warning!",
+        "timestamp": "01-02-2026 09:15:31"
+      },
       {
         "comment_id": 9,
         "parent_comment_id": null,
-        "handler_id": "@Curious",
+        "handler_id": "@Commenter1",
         "type": "comment",
-        "comment": "How can we verify if a message is actually from Mashreq?",
-        "timestamp": "01-02-2026 07:28:30"
-      },
+        "comment": "This is concerning. Thanks for sharing!",
+        "timestamp": "01-02-2026 09:15:31"
+      }
+    ]
+  },
+  {
+    "post_id": 5,
+    "channel": "photogram",
+    "author": "@FeatureRequest",
+    "content": "@FeatureRequest says: Would be great to have dark mode in the app!",
+    "timestamp": "01-02-2026 09:15:33",
+    "comments": [
       {
         "comment_id": 10,
         "parent_comment_id": null,
-        "handler_id": "@Helper",
+        "handler_id": "@Supporter",
         "type": "comment",
-        "comment": "You should report this to the official Mashreq fraud hotline.",
-        "timestamp": "01-02-2026 07:28:30"
-      },
+        "comment": "Always check the official website before clicking any links.",
+        "timestamp": "01-02-2026 09:15:33"
+      }
+    ]
+  },
+  {
+    "post_id": 6,
+    "channel": "linkedup",
+    "author": "@FraudAlert",
+    "content": "@FraudAlert says: WARNING: Fake SMS campaign asking for CVV codes claiming to be from GBank. Do NOT share your details!",
+    "timestamp": "01-02-2026 09:15:34",
+    "comments": [
       {
         "comment_id": 11,
         "parent_comment_id": null,
         "handler_id": "@Worried",
         "type": "comment",
         "comment": "This is getting out of hand. Banks need better security.",
-        "timestamp": "01-02-2026 07:28:31"
+        "timestamp": "01-02-2026 09:15:35"
       },
       {
         "comment_id": 12,
         "parent_comment_id": null,
-        "handler_id": "@Helper",
+        "handler_id": "@Responder",
         "type": "comment",
-        "comment": "You should report this to the official Mashreq fraud hotline.",
-        "timestamp": "01-02-2026 07:28:31"
-      }
-    ]
-  },
-  {
-    "post_id": 5,
-    "channel": "linkedup",
-    "author": "@TechEnthusiast",
-    "content": "@TechEnthusiast says: The biometric login on Mashreq app works perfectly. Very secure!",
-    "timestamp": "01-02-2026 07:28:32",
-    "comments": [
+        "comment": "I experienced the same thing yesterday.",
+        "timestamp": "01-02-2026 09:15:35"
+      },
       {
         "comment_id": 13,
         "parent_comment_id": null,
-        "handler_id": "@Helper",
+        "handler_id": "@Agreeing",
         "type": "comment",
-        "comment": "You should report this to the official Mashreq fraud hotline.",
-        "timestamp": "01-02-2026 07:28:33"
-      }
-    ]
-  },
-  {
-    "post_id": 6,
-    "channel": "chirper",
-    "author": "@AppUser",
-    "content": "@AppUser says: Quick question - what are the new savings account rates?",
-    "timestamp": "01-02-2026 07:28:34",
-    "comments": [
+        "comment": "Yes, I've seen this scam circulating on WhatsApp too.",
+        "timestamp": "01-02-2026 09:15:35"
+      },
       {
         "comment_id": 14,
         "parent_comment_id": null,
-        "handler_id": "@Curious",
+        "handler_id": "@Agreeing",
         "type": "comment",
-        "comment": "How can we verify if a message is actually from Mashreq?",
-        "timestamp": "01-02-2026 07:28:35"
-      },
-      {
-        "comment_id": 15,
-        "parent_comment_id": null,
-        "handler_id": "@Curious",
-        "type": "comment",
-        "comment": "How can we verify if a message is actually from Mashreq?",
-        "timestamp": "01-02-2026 07:28:35"
+        "comment": "Yes, I've seen this scam circulating on WhatsApp too.",
+        "timestamp": "01-02-2026 09:15:36"
       }
     ]
   },
   {
     "post_id": 7,
-    "channel": "photogram",
-    "author": "@TravelBlogger",
-    "content": "@TravelBlogger says: Using Mashreq card abroad - no issues at all. Recommended!",
-    "timestamp": "01-02-2026 07:28:36",
+    "channel": "facespace",
+    "author": "@AppUser",
+    "content": "@AppUser says: Quick question - what are the new savings account rates?",
+    "timestamp": "01-02-2026 09:15:37",
+    "comments": []
+  },
+  {
+    "post_id": 8,
+    "channel": "facespace",
+    "author": "@BrandHijacker",
+    "content": "@BrandHijacker says: I'm GBank manager. Send me your OTP to fix account issue immediately!",
+    "timestamp": "01-02-2026 09:15:39",
     "comments": [
+      {
+        "comment_id": 15,
+        "parent_comment_id": null,
+        "handler_id": "@Thankful",
+        "type": "comment",
+        "comment": "Thank you for the warning!",
+        "timestamp": "01-02-2026 09:15:39"
+      },
       {
         "comment_id": 16,
         "parent_comment_id": null,
-        "handler_id": "@Helper",
+        "handler_id": "@Supporter",
         "type": "comment",
-        "comment": "You should report this to the official Mashreq fraud hotline.",
-        "timestamp": "01-02-2026 07:28:37"
+        "comment": "Always check the official website before clicking any links.",
+        "timestamp": "01-02-2026 09:15:39"
       },
       {
         "comment_id": 17,
         "parent_comment_id": null,
-        "handler_id": "@Commenter1",
+        "handler_id": "@Worried",
         "type": "comment",
-        "comment": "This is concerning. Thanks for sharing!",
-        "timestamp": "01-02-2026 07:28:37"
-      }
-    ]
-  },
-  {
-    "post_id": 8,
-    "channel": "chirper",
-    "author": "@GeneralQuery",
-    "content": "@GeneralQuery says: Can someone explain the difference between current and savings accounts?",
-    "timestamp": "01-02-2026 07:28:38",
-    "comments": [
+        "comment": "This is getting out of hand. Banks need better security.",
+        "timestamp": "01-02-2026 09:15:40"
+      },
       {
         "comment_id": 18,
         "parent_comment_id": null,
         "handler_id": "@Worried",
         "type": "comment",
         "comment": "This is getting out of hand. Banks need better security.",
-        "timestamp": "01-02-2026 07:28:39"
+        "timestamp": "01-02-2026 09:15:40"
       }
     ]
   },
   {
     "post_id": 9,
-    "channel": "chirper",
-    "author": "@SatisfiedUser",
-    "content": "@SatisfiedUser says: Love the new mobile app features. Banking is so much easier now!",
-    "timestamp": "01-02-2026 07:28:40",
-    "comments": []
-  },
-  {
-    "post_id": 10,
-    "channel": "linkedup",
-    "author": "@UrgentAlert",
-    "content": "@UrgentAlert says: CRITICAL: Suspicious activity on your account. Verify your CVV and PIN now: secure-mashreq-verify.com",
-    "timestamp": "01-02-2026 07:28:41",
+    "channel": "facespace",
+    "author": "@HappyCustomer",
+    "content": "@HappyCustomer says: Great service at GBank branch today! The staff was very helpful.",
+    "timestamp": "01-02-2026 09:15:41",
     "comments": [
       {
         "comment_id": 19,
         "parent_comment_id": null,
-        "handler_id": "@Curious",
+        "handler_id": "@Helper",
         "type": "comment",
-        "comment": "How can we verify if a message is actually from Mashreq?",
-        "timestamp": "01-02-2026 07:28:42"
-      },
-      {
-        "comment_id": 20,
-        "parent_comment_id": null,
-        "handler_id": "@Curious",
-        "type": "comment",
-        "comment": "How can we verify if a message is actually from Mashreq?",
-        "timestamp": "01-02-2026 07:28:42"
-      },
-      {
-        "comment_id": 21,
-        "parent_comment_id": null,
-        "handler_id": "@Supporter",
-        "type": "comment",
-        "comment": "Always check the official website before clicking any links.",
-        "timestamp": "01-02-2026 07:28:42"
+        "comment": "You should report this to the official GBank fraud hotline.",
+        "timestamp": "01-02-2026 09:15:42"
       }
     ]
   },
   {
+    "post_id": 10,
+    "channel": "linkedup",
+    "author": "@GeneralQuery",
+    "content": "@GeneralQuery says: Can someone explain the difference between current and savings accounts?",
+    "timestamp": "01-02-2026 09:15:43",
+    "comments": []
+  },
+  {
     "post_id": 11,
     "channel": "threadit",
-    "author": "@PhishingScammer",
-    "content": "@PhishingScammer says: Urgent! Your Mashreq account has been suspended. Click here to verify: mashreq-rewards-portal.com/verify. Act now!",
-    "timestamp": "01-02-2026 07:28:44",
+    "author": "@TravelBlogger",
+    "content": "@TravelBlogger says: Using GBank card abroad - no issues at all. Recommended!",
+    "timestamp": "01-02-2026 09:15:44",
+    "comments": [
+      {
+        "comment_id": 20,
+        "parent_comment_id": null,
+        "handler_id": "@Supporter",
+        "type": "comment",
+        "comment": "Always check the official website before clicking any links.",
+        "timestamp": "01-02-2026 09:15:45"
+      },
+      {
+        "comment_id": 21,
+        "parent_comment_id": null,
+        "handler_id": "@Curious",
+        "type": "comment",
+        "comment": "How can we verify if a message is actually from GBank?",
+        "timestamp": "01-02-2026 09:15:45"
+      }
+    ]
+  },
+  {
+    "post_id": 12,
+    "channel": "photogram",
+    "author": "@SatisfiedUser",
+    "content": "@SatisfiedUser says: Love the new mobile app features. Banking is so much easier now!",
+    "timestamp": "01-02-2026 09:15:46",
     "comments": [
       {
         "comment_id": 22,
         "parent_comment_id": null,
-        "handler_id": "@Curious",
+        "handler_id": "@Worried",
         "type": "comment",
-        "comment": "How can we verify if a message is actually from Mashreq?",
-        "timestamp": "01-02-2026 07:28:44"
+        "comment": "This is getting out of hand. Banks need better security.",
+        "timestamp": "01-02-2026 09:15:47"
       },
       {
         "comment_id": 23,
         "parent_comment_id": null,
-        "handler_id": "@Commenter1",
+        "handler_id": "@Responder",
         "type": "comment",
-        "comment": "This is concerning. Thanks for sharing!",
-        "timestamp": "01-02-2026 07:28:44"
-      },
+        "comment": "I experienced the same thing yesterday.",
+        "timestamp": "01-02-2026 09:15:47"
+      }
+    ]
+  },
+  {
+    "post_id": 13,
+    "channel": "chirper",
+    "author": "@LoyalClient",
+    "content": "@LoyalClient says: Been with GBank for 10 years. Best banking experience!",
+    "timestamp": "01-02-2026 09:15:48",
+    "comments": []
+  },
+  {
+    "post_id": 14,
+    "channel": "bank-official",
+    "author": "Anonymous",
+    "content": "We want to address a growing concern we\u2019ve observed regarding reports of suspicious communications related to financial institutions. While we cannot confirm any specific incidents involving our bank, we take these matters seriously and want to reassure our customers of our commitment to security and trust.\n\nAt [Bank Name], we prioritize safeguarding your information and protecting you from fraudulent activities. Our teams continuously monitor for phishing attempts, scams, and other threats to ensure your safety. We rely on robust cybersecurity measures, including encryption, fraud detection systems, and regular security audits to maintain high standards of protection.\n\nIf you\u2019ve encountered any suspicious messages\u2014whether via SMS, email, or other channels\u2014we strongly encourage you to report them immediately. **Never share sensitive information such as CVV codes, PINs, or personal details with anyone claiming to represent a financial institution.** These tactics are designed to exploit urgency, and we urge you to verify any requests in person, via our official customer service channels, or using trusted banking apps.\n\nFor any concerns, our dedicated support team is available to assist. Visit our website for secure contact details or reach out through our official channels. Together, we can stay vigilant against fraud and keep our community safe.\n\nThank you for your trust and vigilance. We\u2019re here to support you.",
+    "timestamp": "01-02-2026 09:16:39",
+    "comments": []
+  },
+  {
+    "post_id": 15,
+    "channel": "threadit",
+    "author": "@SatisfiedUser",
+    "content": "@SatisfiedUser says: Love the new mobile app features. Banking is so much easier now!",
+    "timestamp": "01-02-2026 09:28:18",
+    "comments": [
       {
         "comment_id": 24,
         "parent_comment_id": null,
         "handler_id": "@Worried",
         "type": "comment",
         "comment": "This is getting out of hand. Banks need better security.",
-        "timestamp": "01-02-2026 07:28:45"
-      },
+        "timestamp": "01-02-2026 09:28:20"
+      }
+    ]
+  },
+  {
+    "post_id": 16,
+    "channel": "linkedup",
+    "author": "@TravelBlogger",
+    "content": "@TravelBlogger says: Using GBank card abroad - no issues at all. Recommended!",
+    "timestamp": "01-02-2026 09:28:22",
+    "comments": []
+  },
+  {
+    "post_id": 17,
+    "channel": "facespace",
+    "author": "@TechEnthusiast",
+    "content": "@TechEnthusiast says: The biometric login on GBank app works perfectly. Very secure!",
+    "timestamp": "01-02-2026 09:28:23",
+    "comments": [
       {
         "comment_id": 25,
         "parent_comment_id": null,
         "handler_id": "@Commenter1",
         "type": "comment",
         "comment": "This is concerning. Thanks for sharing!",
-        "timestamp": "01-02-2026 07:28:45"
+        "timestamp": "01-02-2026 09:28:23"
       }
     ]
   },
   {
-    "post_id": 12,
+    "post_id": 18,
     "channel": "linkedup",
-    "author": "@HappyCustomer",
-    "content": "@HappyCustomer says: Great service at Mashreq branch today! The staff was very helpful.",
-    "timestamp": "01-02-2026 07:28:47",
+    "author": "@LoyalClient",
+    "content": "@LoyalClient says: Been with GBank for 10 years. Best banking experience!",
+    "timestamp": "01-02-2026 09:28:25",
     "comments": [
       {
         "comment_id": 26,
         "parent_comment_id": null,
-        "handler_id": "@Worried",
+        "handler_id": "@Curious",
         "type": "comment",
-        "comment": "This is getting out of hand. Banks need better security.",
-        "timestamp": "01-02-2026 07:28:47"
+        "comment": "How can we verify if a message is actually from GBank?",
+        "timestamp": "01-02-2026 09:28:25"
       },
       {
         "comment_id": 27,
         "parent_comment_id": null,
-        "handler_id": "@Thankful",
+        "handler_id": "@Curious",
         "type": "comment",
-        "comment": "Thank you for the warning!",
-        "timestamp": "01-02-2026 07:28:47"
+        "comment": "How can we verify if a message is actually from GBank?",
+        "timestamp": "01-02-2026 09:28:26"
       }
     ]
   },
   {
-    "post_id": 13,
+    "post_id": 19,
+    "channel": "chirper",
+    "author": "@HappyCustomer",
+    "content": "@HappyCustomer says: Great service at GBank branch today! The staff was very helpful.",
+    "timestamp": "01-02-2026 09:28:27",
+    "comments": [
+      {
+        "comment_id": 28,
+        "parent_comment_id": null,
+        "handler_id": "@Helper",
+        "type": "comment",
+        "comment": "You should report this to the official GBank fraud hotline.",
+        "timestamp": "01-02-2026 09:28:27"
+      }
+    ]
+  },
+  {
+    "post_id": 20,
+    "channel": "facespace",
+    "author": "@BrandHijacker",
+    "content": "@BrandHijacker says: I'm GBank manager. Send me your OTP to fix account issue immediately!",
+    "timestamp": "01-02-2026 09:28:29",
+    "comments": [
+      {
+        "comment_id": 29,
+        "parent_comment_id": null,
+        "handler_id": "@Responder",
+        "type": "comment",
+        "comment": "I experienced the same thing yesterday.",
+        "timestamp": "01-02-2026 09:28:29"
+      },
+      {
+        "comment_id": 30,
+        "parent_comment_id": null,
+        "handler_id": "@Supporter",
+        "type": "comment",
+        "comment": "Always check the official website before clicking any links.",
+        "timestamp": "01-02-2026 09:28:29"
+      }
+    ]
+  },
+  {
+    "post_id": 21,
     "channel": "photogram",
+    "author": "@GeneralQuery",
+    "content": "@GeneralQuery says: Can someone explain the difference between current and savings accounts?",
+    "timestamp": "01-02-2026 09:28:31",
+    "comments": [
+      {
+        "comment_id": 31,
+        "parent_comment_id": null,
+        "handler_id": "@Thankful",
+        "type": "comment",
+        "comment": "Thank you for the warning!",
+        "timestamp": "01-02-2026 09:28:31"
+      },
+      {
+        "comment_id": 32,
+        "parent_comment_id": null,
+        "handler_id": "@Agreeing",
+        "type": "comment",
+        "comment": "Yes, I've seen this scam circulating on WhatsApp too.",
+        "timestamp": "01-02-2026 09:28:31"
+      }
+    ]
+  },
+  {
+    "post_id": 22,
+    "channel": "threadit",
+    "author": "@FraudAlert",
+    "content": "@FraudAlert says: WARNING: Fake SMS campaign asking for CVV codes claiming to be from GBank. Do NOT share your details!",
+    "timestamp": "01-02-2026 09:28:33",
+    "comments": [
+      {
+        "comment_id": 33,
+        "parent_comment_id": null,
+        "handler_id": "@Helper",
+        "type": "comment",
+        "comment": "You should report this to the official GBank fraud hotline.",
+        "timestamp": "01-02-2026 09:28:33"
+      },
+      {
+        "comment_id": 34,
+        "parent_comment_id": null,
+        "handler_id": "@Commenter1",
+        "type": "comment",
+        "comment": "This is concerning. Thanks for sharing!",
+        "timestamp": "01-02-2026 09:28:33"
+      },
+      {
+        "comment_id": 35,
+        "parent_comment_id": null,
+        "handler_id": "@Agreeing",
+        "type": "comment",
+        "comment": "Yes, I've seen this scam circulating on WhatsApp too.",
+        "timestamp": "01-02-2026 09:28:34"
+      },
+      {
+        "comment_id": 36,
+        "parent_comment_id": null,
+        "handler_id": "@Worried",
+        "type": "comment",
+        "comment": "This is getting out of hand. Banks need better security.",
+        "timestamp": "01-02-2026 09:28:34"
+      }
+    ]
+  },
+  {
+    "post_id": 23,
+    "channel": "threadit",
+    "author": "@SuspiciousUser",
+    "content": "@SuspiciousUser says: Free iPhone 15 for first 100 GBank customers! Share your card number here: bit.ly/gbank-prize",
+    "timestamp": "01-02-2026 09:28:35",
+    "comments": [
+      {
+        "comment_id": 37,
+        "parent_comment_id": null,
+        "handler_id": "@Commenter1",
+        "type": "comment",
+        "comment": "This is concerning. Thanks for sharing!",
+        "timestamp": "01-02-2026 09:28:36"
+      },
+      {
+        "comment_id": 38,
+        "parent_comment_id": null,
+        "handler_id": "@Commenter1",
+        "type": "comment",
+        "comment": "This is concerning. Thanks for sharing!",
+        "timestamp": "01-02-2026 09:28:36"
+      }
+    ]
+  },
+  {
+    "post_id": 24,
+    "channel": "chirper",
     "author": "@FeatureRequest",
     "content": "@FeatureRequest says: Would be great to have dark mode in the app!",
-    "timestamp": "01-02-2026 07:28:49",
+    "timestamp": "01-02-2026 09:28:37",
     "comments": []
+  },
+  {
+    "post_id": 25,
+    "channel": "photogram",
+    "author": "@AppUser",
+    "content": "@AppUser says: Quick question - what are the new savings account rates?",
+    "timestamp": "01-02-2026 09:28:39",
+    "comments": []
+  },
+  {
+    "post_id": 26,
+    "channel": "chirper",
+    "author": "@PhishingScammer",
+    "content": "@PhishingScammer says: Urgent! Your GBank account has been suspended. Click here to verify: gbank-rewards-portal.com/verify. Act now!",
+    "timestamp": "01-02-2026 09:28:40",
+    "comments": [
+      {
+        "comment_id": 39,
+        "parent_comment_id": null,
+        "handler_id": "@Commenter1",
+        "type": "comment",
+        "comment": "This is concerning. Thanks for sharing!",
+        "timestamp": "01-02-2026 09:28:41"
+      },
+      {
+        "comment_id": 40,
+        "parent_comment_id": null,
+        "handler_id": "@Agreeing",
+        "type": "comment",
+        "comment": "Yes, I've seen this scam circulating on WhatsApp too.",
+        "timestamp": "01-02-2026 09:28:41"
+      }
+    ]
+  },
+  {
+    "post_id": 27,
+    "channel": "chirper",
+    "author": "@ImpersonatorBot",
+    "content": "@ImpersonatorBot says: GBank Official: You've won $10,000! Click link to claim: gbank-lottery.com/claim",
+    "timestamp": "01-02-2026 09:28:42",
+    "comments": [
+      {
+        "comment_id": 41,
+        "parent_comment_id": null,
+        "handler_id": "@Responder",
+        "type": "comment",
+        "comment": "I experienced the same thing yesterday.",
+        "timestamp": "01-02-2026 09:28:43"
+      },
+      {
+        "comment_id": 42,
+        "parent_comment_id": null,
+        "handler_id": "@Supporter",
+        "type": "comment",
+        "comment": "Always check the official website before clicking any links.",
+        "timestamp": "01-02-2026 09:28:43"
+      },
+      {
+        "comment_id": 43,
+        "parent_comment_id": null,
+        "handler_id": "@Thankful",
+        "type": "comment",
+        "comment": "Thank you for the warning!",
+        "timestamp": "01-02-2026 09:28:43"
+      }
+    ]
   }
 ]

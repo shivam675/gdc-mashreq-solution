@@ -1,6 +1,6 @@
 """
 FDA Agent Simulator
-Sends fake sentiment data to the Bank Sentinel backend every 30 seconds
+Sends fake sentiment data to the SLM Desk backend every 30 seconds
 """
 import asyncio
 import httpx

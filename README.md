@@ -1,8 +1,8 @@
-# 🏦 Bank Sentinel - Social Signal Intelligence System
+# 🏦 SLM Desk - Social Signal Intelligence System
 
 > **GDC Dubai 2026 Hackathon Solution**  
-> **Challenge**: Mashreq Bounty - AI for Social Signal Intelligence in Banking  
-> **Team**: Bank Sentinel
+> **Challenge**: GBank Bounty - AI for Social Signal Intelligence in Banking  
+> **Team**: SLM Desk
 
 ---
 
@@ -447,7 +447,7 @@ Every analysis includes these components:
 {
   "drivers": [
     "Phishing SMS mentioning fake rewards",
-    "Fraudulent domain mashreq-rewards-portal.com",
+    "Fraudulent domain gbank-rewards-portal.com",
     "Multiple CVV disclosure reports"
   ],
   "context": {
@@ -872,8 +872,8 @@ ollama pull llama3.2:latest
 
 ### Step 2: Clone Repository
 ```bash
-git clone https://github.com/your-org/bank-sentinel.git
-cd bank-sentinel
+git clone https://github.com/your-org/slm-desk.git
+cd slm-desk
 ```
 
 ### Step 3: Setup Social Media Backend
@@ -1214,8 +1214,8 @@ python generate_posts.py --type mixed --count 100
 ## 📞 Support & Contact
 
 **Built for GDC Dubai 2026 Hackathon**  
-**Challenge**: Mashreq Bounty - AI for Social Signal Intelligence  
-**Repository**: https://github.com/your-org/bank-sentinel
+**Challenge**: GBank Bounty - AI for Social Signal Intelligence  
+**Repository**: https://github.com/your-org/slm-desk
 
 ---
 

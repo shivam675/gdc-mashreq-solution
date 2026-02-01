@@ -1,8 +1,8 @@
 # Quick Start Script
-# Run this to start all components of Bank Sentinel (Network Accessible)
+# Run this to start all components of SLM Desk (Network Accessible)
 
 Write-Host "========================================" -ForegroundColor Cyan
-Write-Host "   Bank Sentinel - Quick Start" -ForegroundColor Cyan
+Write-Host "   SLM Desk - Quick Start" -ForegroundColor Cyan
 Write-Host "   (Network Accessible Mode)" -ForegroundColor Cyan
 Write-Host "========================================" -ForegroundColor Cyan
 Write-Host ""

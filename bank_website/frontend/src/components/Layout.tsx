@@ -27,7 +27,7 @@ export default function Layout() {
               <Activity className="w-6 h-6 text-white" />
             </div>
             <div>
-              <h1 className="text-xl font-bold text-slate-900 dark:text-white">Bank Sentinel</h1>
+              <h1 className="text-xl font-bold text-slate-900 dark:text-white">SLM Desk</h1>
               <p className="text-xs text-slate-600 dark:text-slate-400">Multi-Agent System</p>
             </div>
           </div>
@@ -161,7 +161,7 @@ export default function Layout() {
         {/* Footer */}
         <div className="p-4 border-t border-slate-200 dark:border-slate-700">
           <p className="text-xs text-slate-500 dark:text-slate-600 text-center">
-            © 2026 Bank Sentinel
+            © 2026 SLM Desk
           </p>
         </div>
       </aside>

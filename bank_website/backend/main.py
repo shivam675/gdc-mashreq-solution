@@ -17,16 +17,16 @@ logger = logging.getLogger(__name__)
 async def lifespan(app: FastAPI):
     """Startup and shutdown events"""
     # Startup
-    logger.info("Starting Bank Sentinel API...")
+    logger.info("Starting SLM Desk API...")
     await init_db()
     logger.info("Database initialized")
     yield
     # Shutdown
-    logger.info("Shutting down Bank Sentinel API...")
+    logger.info("Shutting down SLM Desk API...")
 
 # Create FastAPI app
 app = FastAPI(
-    title="Bank Sentinel API",
+    title="SLM Desk API",
     description="Multi-Agent System for Bank Sentiment Analysis and PR Management",
     version="1.0.0",
     lifespan=lifespan
@@ -49,7 +49,7 @@ app.include_router(database_router, prefix="/api", tags=["Database"])
 async def root():
     """Root endpoint"""
     return {
-        "name": "Bank Sentinel API",
+        "name": "SLM Desk API",
         "version": "1.0.0",
         "status": "running",
         "endpoints": {

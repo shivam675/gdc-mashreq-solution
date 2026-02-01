@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 FDA Agent - Fraud Detection & Analysis Agent
-Monitors social media for potential security threats and sends signals to Bank Sentinel
+Monitors social media for potential security threats and sends signals to SLM Desk
 """
 
 import asyncio
