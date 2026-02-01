@@ -27,21 +27,31 @@ class InternalAnalysisAgent:
         self.social_media_api = "http://localhost:8001/api"  # Social media platform
     
     async def _fetch_social_posts(self, limit: int = 100) -> List[Dict[str, Any]]:
-        """Fetch recent posts from social media platform"""
+        """Fetch recent posts from social media platform for pattern analysis"""
         try:
             async with httpx.AsyncClient(timeout=15.0) as client:
-                # /api/sync returns list of post objects directly
-                response = await client.get(f"{self.social_media_api}/sync")
+                # Fetch posts across all channels
+                response = await client.get("http://localhost:8001/posts/")
                 response.raise_for_status()
                 posts_data = response.json()
                 
-                # posts_data is already a list of posts
                 if not isinstance(posts_data, list):
-                    logger.warning(f"Unexpected sync response format: {type(posts_data)}")
+                    logger.warning(f"Unexpected posts response format: {type(posts_data)}")
                     return []
                 
-                logger.info(f"Fetched {len(posts_data)} social media posts from sync")
-                return posts_data[:limit]
+                # Transform to expected format (no time filtering - use all available posts for demo)
+                recent_posts = []
+                for post in posts_data:
+                    recent_posts.append({
+                        'post_id': post.get('id'),
+                        'content': post.get('content', ''),
+                        'channel': post.get('channel_id', 'general'),
+                        'timestamp': post.get('created_at', ''),
+                        'author': 'social_user'
+                    })
+                
+                logger.info(f"Fetched {len(recent_posts)} posts for analysis")
+                return recent_posts[:limit]
         except Exception as e:
             logger.error(f"Error fetching social posts: {e}")
             return []

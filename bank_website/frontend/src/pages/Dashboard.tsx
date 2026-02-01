@@ -298,6 +298,7 @@ function SectionHeader({
 }
 
 // New compact stat card component
+/*
 function StatCard({ 
   label, 
   value, 
@@ -324,6 +325,7 @@ function StatCard({
     </div>
   );
 }
+*/
 
 function InfoRow({ label, value, badge }: { label: string; value: string; badge?: boolean }) {
   return (
@@ -468,6 +470,7 @@ function cleanMarkdownFences(text: string): string {
 }
 
 // Transactions Table Component
+/*
 function TransactionsTable({ 
   transactions, 
   maxRows 
@@ -543,8 +546,10 @@ function TransactionsTable({
     </div>
   );
 }
+*/
 
 // Reviews Table Component
+/*
 function ReviewsTable({ 
   reviews, 
   maxRows 
@@ -626,3 +631,7 @@ function ReviewsTable({
   );
 }
 
+
+
+
+*/

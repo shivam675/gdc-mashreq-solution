@@ -357,7 +357,7 @@ function ReviewsTable() {
                     {isEditing ? (
                       <select
                         value={editForm.sentiment || review.sentiment}
-                        onChange={(e) => setEditForm({ ...editForm, sentiment: e.target.value })}
+                        onChange={(e) => setEditForm({ ...editForm, sentiment: e.target.value as 'positive' | 'negative' | 'neutral' })}
                         className="px-2 py-1 bg-slate-900 border border-slate-600 rounded text-slate-100 text-sm"
                       >
                         <option value="positive">Positive</option>

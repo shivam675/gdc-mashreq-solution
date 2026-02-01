@@ -6,10 +6,12 @@ import Sidebar from "./components/Sidebar";
 import { Channel } from "./types";
 
 const DEFAULT_CHANNELS: Channel[] = [
-  { id: "lifestyle", name: "lifestyle" },
-  { id: "social", name: "Social" },
-  { id: "science", name: "Science" },
-  { id: "banking", name: "Banking" },
+  { id: "bank-official", name: "Bank Official" },
+  { id: "chirper", name: "Chirper" },
+  { id: "photogram", name: "Photogram" },
+  { id: "facespace", name: "FaceSpace" },
+  { id: "linkedup", name: "LinkedUp" },
+  { id: "threadit", name: "Threadit" },
 ];
 
 export default function App() {

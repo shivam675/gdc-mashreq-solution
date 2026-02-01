@@ -12,26 +12,52 @@ type Props = {
 export default function Feed({ channel }: Props) {
   const [posts, setPosts] = useState<Post[]>([]);
   const [loading, setLoading] = useState(false);
+  const [isRefreshing, setIsRefreshing] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
 
-  const loadPosts = useCallback(async () => {
-    setLoading(true);
+  const loadPosts = useCallback(async (isAutoRefresh = false) => {
+    if (isAutoRefresh) {
+      setIsRefreshing(true);
+    } else {
+      setLoading(true);
+    }
     try {
       const res = await fetchPosts(channel.id);
       setPosts(res.data);
     } catch (err) {
       console.error(err);
     } finally {
-      setLoading(false);
+      if (isAutoRefresh) {
+        setIsRefreshing(false);
+      } else {
+        setLoading(false);
+      }
     }
   }, [channel.id]);
 
   useEffect(() => {
-    loadPosts();
+    // Initial load
+    loadPosts(false);
+    
+    // Auto-refresh every 3 seconds to show new posts
+    const interval = setInterval(() => {
+      loadPosts(true);
+    }, 3000);
+    
+    // Cleanup on unmount or channel change
+    return () => clearInterval(interval);
   }, [loadPosts]);
 
   return (
     <div className="flex flex-col h-full w-full">
+      {/* Auto-refresh indicator */}
+      {isRefreshing && (
+        <div className="absolute top-2 right-2 z-50 px-3 py-1.5 bg-blue-500/20 border border-blue-500/30 rounded-full text-xs text-blue-400 flex items-center gap-2">
+          <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
+          Refreshing...
+        </div>
+      )}
+      
       {/* Scrollable Post Area */}
       <div className="flex-1 overflow-y-auto scrollbar-thin scrollbar-thumb-white/10 scrollbar-track-transparent">
         <div className="w-full max-w-3xl mx-auto px-4 py-8">
@@ -51,7 +77,7 @@ export default function Feed({ channel }: Props) {
                 <PostCard
                   key={post.id}
                   post={post}
-                  refreshFeed={loadPosts}
+                  refreshFeed={() => loadPosts(true)}
                 />
               ))}
             </div>

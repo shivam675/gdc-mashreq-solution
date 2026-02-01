@@ -18,54 +18,7 @@ export default function AuditTrail() {
   const [filterAction, setFilterAction] = useState<string>('all');
   const [filterOperator, setFilterOperator] = useState<string>('');
   
-  // Mock data for now - will be replaced with real API
-  const mockAuditData: AuditEntry[] = [
-    {
-      id: 1,
-      workflow_id: 'WF-2024-001',
-      action: 'approved',
-      performed_by: 'John Smith',
-      timestamp: new Date(Date.now() - 3600000).toISOString(),
-      details: 'Approved original post after review',
-      risk_level: 'MEDIUM'
-    },
-    {
-      id: 2,
-      workflow_id: 'WF-2024-002',
-      action: 'escalated_management',
-      performed_by: 'Sarah Johnson',
-      timestamp: new Date(Date.now() - 7200000).toISOString(),
-      details: 'Escalated to management due to high confidence uncertainty',
-      risk_level: 'HIGH'
-    },
-    {
-      id: 3,
-      workflow_id: 'WF-2024-003',
-      action: 'discarded',
-      performed_by: 'Mike Davis',
-      timestamp: new Date(Date.now() - 10800000).toISOString(),
-      details: 'Discarded - false positive',
-      risk_level: 'LOW'
-    },
-    {
-      id: 4,
-      workflow_id: 'WF-2024-004',
-      action: 'escalated_legal',
-      performed_by: 'Emily Chen',
-      timestamp: new Date(Date.now() - 14400000).toISOString(),
-      details: 'Escalated to legal/compliance for review',
-      risk_level: 'CRITICAL'
-    },
-    {
-      id: 5,
-      workflow_id: 'WF-2024-005',
-      action: 'approved_edited',
-      performed_by: 'David Wilson',
-      timestamp: new Date(Date.now() - 18000000).toISOString(),
-      details: 'Edited post for clarity, then approved',
-      risk_level: 'MEDIUM'
-    },
-  ];
+  // Mock data removed - using real API from workflows
 
   const { data: workflows, isLoading: workflowsLoading } = useQuery({
     queryKey: ['workflows'],
@@ -77,7 +30,7 @@ export default function AuditTrail() {
   });
 
   // Convert workflows to audit entries
-  const auditLog: AuditEntry[] = workflows?.map((w: any, index: number) => {
+  const auditLog: AuditEntry[] = workflows?.map((w: any) => {
     let action = 'pending';
     let performed_by = 'System';
     let details = 'Workflow created';
@@ -394,3 +347,4 @@ export default function AuditTrail() {
     </div>
   );
 }
+

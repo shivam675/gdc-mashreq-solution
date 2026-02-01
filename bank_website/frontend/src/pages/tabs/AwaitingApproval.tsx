@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { workflowsApi } from '@/api';
-import { Edit3, Send, X, Clock, FileText, Info, XCircle, AlertTriangle, Shield, Flag, UserCheck, Trash2, ChevronDown, ChevronUp } from 'lucide-react';
+import { Edit3, Send, X, Clock, FileText, Info, AlertTriangle, Shield, Flag, UserCheck, Trash2, ChevronDown, ChevronUp } from 'lucide-react';
 import { formatDistanceToNow } from 'date-fns';
 import ReactMarkdown from 'react-markdown';
 
@@ -43,7 +43,21 @@ function ConfidenceBand({ score }: { score: number }) {
   return (
     <div className="space-y-2">
       <div className="flex items-center justify-between text-sm">
-        <span className="text-slate-400">Confidence Level</span>
+        <div className="flex items-center gap-2">
+          <span className="text-slate-400">Confidence Level</span>
+          <div className="group relative">
+            <Info className="w-4 h-4 text-slate-500 cursor-help" />
+            <div className="absolute left-0 bottom-full mb-2 hidden group-hover:block w-64 p-3 bg-slate-900 border border-slate-700 rounded-lg shadow-xl z-10">
+              <p className="text-xs text-slate-300 leading-relaxed">
+                <strong className="text-white">Confidence Level:</strong> Represents the FDA agent's certainty in detecting this threat pattern based on signal strength and consistency.
+                <br/><br/>
+                <span className="text-green-400">≥80%:</span> High confidence - clear threat signals<br/>
+                <span className="text-yellow-400">60-79%:</span> Medium confidence - moderate signals<br/>
+                <span className="text-red-400">&lt;60%:</span> Low confidence - weak or ambiguous signals
+              </p>
+            </div>
+          </div>
+        </div>
         <span className={`font-semibold ${score >= 80 ? 'text-green-400' : score >= 60 ? 'text-yellow-400' : 'text-red-400'}`}>
           {score}% - {label}
         </span>
@@ -75,8 +89,21 @@ function DataQualityIndicator({ quality }: { quality: string }) {
   return (
     <div className={`flex items-center space-x-2 px-3 py-2 ${config.bg} border ${config.border} rounded-lg`}>
       <span className={`text-lg ${config.color}`}>{config.icon}</span>
-      <div>
+      <div className="flex items-center gap-2 flex-1">
         <p className={`text-sm font-medium ${config.color}`}>Data Quality: {quality.charAt(0).toUpperCase() + quality.slice(1)}</p>
+        <div className="group relative">
+          <Info className="w-4 h-4 text-slate-500 cursor-help" />
+          <div className="absolute left-0 bottom-full mb-2 hidden group-hover:block w-72 p-3 bg-slate-900 border border-slate-700 rounded-lg shadow-xl z-10">
+            <p className="text-xs text-slate-300 leading-relaxed">
+              <strong className="text-white">Data Quality:</strong> Indicates how much social media data was analyzed and reliability of the assessment.
+              <br/><br/>
+              <span className="text-green-400">Excellent (≥90%):</span> Large dataset, high reliability<br/>
+              <span className="text-blue-400">Good (75-89%):</span> Sufficient data for analysis<br/>
+              <span className="text-yellow-400">Fair (60-74%):</span> Limited data, acceptable<br/>
+              <span className="text-red-400">Poor (&lt;60%):</span> Insufficient data, low reliability
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -371,13 +398,26 @@ export default function AwaitingApproval({ workflows, isLoading, refetch }: Prop
                       
                       {/* Risk Badge */}
                       {workflow.risk_level && (
-                        <div className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                          workflow.risk_level === 'CRITICAL' ? 'bg-red-500/20 text-red-400 border border-red-500/30' :
-                          workflow.risk_level === 'HIGH' ? 'bg-orange-500/20 text-orange-400 border border-orange-500/30' :
-                          workflow.risk_level === 'MEDIUM' ? 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30' :
-                          'bg-blue-500/20 text-blue-400 border border-blue-500/30'
-                        }`}>
-                          {workflow.risk_level} RISK
+                        <div className="group relative">
+                          <div className={`px-3 py-1 rounded-full text-xs font-semibold flex items-center gap-1 ${
+                            workflow.risk_level === 'CRITICAL' ? 'bg-red-500/20 text-red-400 border border-red-500/30' :
+                            workflow.risk_level === 'HIGH' ? 'bg-orange-500/20 text-orange-400 border border-orange-500/30' :
+                            workflow.risk_level === 'MEDIUM' ? 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30' :
+                            'bg-blue-500/20 text-blue-400 border border-blue-500/30'
+                          }`}>
+                            {workflow.risk_level} RISK
+                            <Info className="w-3 h-3 cursor-help" />
+                          </div>
+                          <div className="absolute right-0 bottom-full mb-2 hidden group-hover:block w-72 p-3 bg-slate-900 border border-slate-700 rounded-lg shadow-xl z-10">
+                            <p className="text-xs text-slate-300 leading-relaxed">
+                              <strong className="text-white">Risk Level:</strong> Assessment of threat severity and potential impact on the bank.
+                              <br/><br/>
+                              <span className="text-red-400">CRITICAL:</span> Fraud/phishing threats, immediate customer safety risk<br/>
+                              <span className="text-orange-400">HIGH:</span> Service outages, significant brand/operational impact<br/>
+                              <span className="text-yellow-400">MEDIUM:</span> Moderate sentiment shifts, potential issues<br/>
+                              <span className="text-blue-400">LOW:</span> Minor concerns, positive signals
+                            </p>
+                          </div>
                         </div>
                       )}
                     </div>

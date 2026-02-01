@@ -2,7 +2,7 @@
 import axios from "axios";
 
 export const API = axios.create({
-  baseURL: "http://127.0.0.1:8000",
+  baseURL: "http://127.0.0.1:8001",
 });
 
 export const createPost = (data: any) => API.post("/posts/", data);
@@ -20,4 +20,4 @@ export const reactPost = (postId: number, emoji: string) =>
   API.post(`/reactions/${postId}`, { emoji });
 
 // ✅ NEW RESET FUNCTION
-export const resetDatabase = () => API.delete("/api/reset");
+export const resetDatabase = () => API.delete("/api/reset/all");

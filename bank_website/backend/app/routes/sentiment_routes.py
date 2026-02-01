@@ -74,7 +74,9 @@ async def process_sentiment_workflow(
         workflow.status = AgentWorkflowStatus.IAA_COMPLETED
         
         # Extract confidence and risk from FDA signal
-        workflow.confidence_score = sentiment_data.get("confidence", 75.0)
+        # FDA sends confidence as 0-1 range, convert to 0-100 for display
+        fda_confidence = sentiment_data.get("confidence", 0.75)
+        workflow.confidence_score = fda_confidence * 100.0
         
         # Determine data quality based on confidence
         if workflow.confidence_score >= 90:

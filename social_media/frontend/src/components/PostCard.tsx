@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactMarkdown from 'react-markdown';
 import { Post } from "../types";
 import ReactionBar from "./ReactionBar";
 import CommentSection from "./CommentSection";
@@ -43,8 +44,8 @@ const PostCard: React.FC<PostCardProps> = ({ post, refreshFeed }) => {
         </div>
       </div>
 
-      <div className="text-slate-800 dark:text-slate-300 text-[15px] leading-7 mb-4 whitespace-pre-wrap">
-        {post.content}
+      <div className="text-slate-800 dark:text-slate-300 text-[15px] leading-7 mb-4 prose prose-slate dark:prose-invert max-w-none prose-headings:font-semibold prose-h1:text-xl prose-h2:text-lg prose-h3:text-base prose-p:my-2 prose-ul:my-2 prose-li:my-1">
+        <ReactMarkdown>{post.content}</ReactMarkdown>
       </div>
 
       {post.image_url && (
